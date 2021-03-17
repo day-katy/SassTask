@@ -1,6 +1,6 @@
 
 import React from 'react';
-import TaskScreen from './components/TaskScreen';
+import TaskScreen from './screens/TaskScreen';
 
 
 export default function App() {

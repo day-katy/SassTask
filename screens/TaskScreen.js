@@ -1,32 +1,48 @@
-import React from 'react';
+import React, {useState} from 'react'; 
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
-import Task from './Task';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView, Keyboard } from 'react-native';
+import Task from '../components/Task';
 
-const addTask = () => {
 
-}
+
+
 
 const TaskScreen = () => {
+  const [taskItems, setTaskItems] = useState([])
+  const [task, setTask] = useState();
+  const addTask = () => { 
+    Keyboard.dismiss();
+    setTaskItems([...taskItems, task])
+    setTask('');
+  }
   return (
     <View style={styles.container}>
       <View>
+        
         <Text style={styles.title}>Team SassTask!</Text>
         <StatusBar style="auto" />
       </View>
 
-      <View style={styles.taskList}>
-        <Task text={'task1'} />
-        <Task text={'task2'}/>
-        <Task text={'dj khalid'}/>
+      <View style={styles.taskList}>{
+          taskItems.map((item, index) => {
+            return <Task key = {index} text={item} />
+          })
+        }
       </View>
 
       <View style={styles.addTaskSection}>
         <View style={styles.addTask}>
-        <TextInput placeholder='add task'/>
+        <TextInput placeholder={'Add task'} value={task} onChangeText={text => setTask(text)} />
         </View>
-
-        <TouchableOpacity onPress ={addTask()} style={styles.addTaskButton}>+</TouchableOpacity>
+ 
+        <TouchableOpacity onPress ={() => addTask()} style={styles.addTaskButton}>
+          <View>
+            <Text>
+              +
+              </Text>
+            </View>
+          </TouchableOpacity>
+      
       </View>
     </View>
   )
@@ -57,6 +73,7 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     borderColor: 'grey',
     textAlign: 'center',
+    alignItems: 'center',
     height: 40,
     width: 40,
     display: 'flex',
@@ -65,7 +82,7 @@ const styles = StyleSheet.create({
 
   },
   title: {
-    backgroundColor: 'blue',
+    fontSize: 40,
   }
 });
 
