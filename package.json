@@ -18,7 +18,10 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
-    "jest-expo": "^40.0.2",
+    "@testing-library/react-native": "~7.1.0",
+    "jest": "~26.6.3",
+    "jest-expo": "~40.0.1",
+    "jest-fetch-mock": "~3.0.3",
     "react-test-renderer": "^17.0.1"
   },
   "private": true,
@@ -30,4 +33,3 @@
     "automock": false
   }
 }
-
