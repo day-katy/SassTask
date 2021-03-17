@@ -1,7 +1,9 @@
 import React, {useState} from 'react'; 
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView, Keyboard } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Header, KeyboardAvoidingView, Keyboard } from 'react-native';
 import Task from '../components/Task';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 
 
 
@@ -17,8 +19,13 @@ const TaskScreen = () => {
   }
   return (
     <View style={styles.container}>
+      <Header
+        placement="left"
+        leftComponent={{ icon: 'menu', color: '#fff' }}
+        centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+        rightComponent={{ icon: 'home', color: '#fff' }}
+      />
       <View>
-        
         <Text style={styles.title}>Team SassTask!</Text>
         <StatusBar style="auto" />
       </View>
@@ -36,11 +43,9 @@ const TaskScreen = () => {
         </View>
  
         <TouchableOpacity onPress ={() => addTask()} style={styles.addTaskButton}>
-          <View>
-            <Text>
+            <Text style={styles.buttonText}>
               +
               </Text>
-            </View>
           </TouchableOpacity>
       
       </View>
@@ -59,7 +64,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'column',
+    flexDirection: 'row',
     margin: 10,
   },
   addTask: {
@@ -72,14 +77,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#f05365',
     borderRadius: 60,
     borderColor: 'grey',
-    textAlign: 'center',
+    // textAlign: 'center',
     alignItems: 'center',
-    height: 40,
-    width: 40,
+    justifyContent: 'center',
+    height: 60,
+    width: 60,
     display: 'flex',
-    margin: 10,
+ 
+    
+  },
+  buttonText: {
     fontSize: 40,
-
+    // textAlign: 'center',
+    // vAlignItems: 'center'
   },
   title: {
     fontSize: 40,
