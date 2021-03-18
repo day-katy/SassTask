@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "lightsalmon",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        Object {
+          "backgroundColor": "blue",
+        }
+      }
+    >
+      Team SassTask!
+    </Text>
+  </View>
+  <View>
+    <View>
+      <Text>
+        task1
+      </Text>
+    </View>
+    <View>
+      <Text>
+        task2
+      </Text>
+    </View>
+    <View>
+      <Text>
+        dj khalid
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "margin": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderRadius": 60,
+          "margin": 5,
+          "padding": 20,
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        placeholder="add task"
+        rejectResponderTermination={true}
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      accessible={true}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#f05365",
+          "borderColor": "grey",
+          "borderRadius": 60,
+          "display": "flex",
+          "fontSize": 40,
+          "height": 40,
+          "margin": 10,
+          "opacity": 1,
+          "textAlign": "center",
+          "width": 40,
+        }
+      }
+    >
+      +
+    </View>
+  </View>
+</View>
+`;
