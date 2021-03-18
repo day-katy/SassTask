@@ -18,7 +18,6 @@ const TaskScreen = () => {
   return (
     <View style={styles.container}>
       <View>
-        
         <Text style={styles.title}>Team SassTask!</Text>
         <StatusBar style="auto" />
       </View>
