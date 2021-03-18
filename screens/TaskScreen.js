@@ -1,20 +1,32 @@
 import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView, Keyboard, Image } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView, Keyboard, Image, Button } from 'react-native';
 import Task from '../components/Task';
-
-
+import happyPNG from '../assets/Happy-face.png'
+import unhappyPNG from '../assets/Unhappy-face.png'
 
 
 
 const TaskScreen = () => {
+
   const [taskItems, setTaskItems] = useState([])
   const [task, setTask] = useState();
   const addTask = () => {
     Keyboard.dismiss();
-    setTaskItems([...taskItems, task])
+    setTaskItems([...taskItems, task]);
     setTask('');
+  };
+  const [imageSrc, setImageSrc] = useState(happyPNG);
+
+  const changeImage = () => {
+    setImageSrc(unhappyPNG);
   }
+
+  const renderImage = () => {
+      return (
+        <Image source={imageSrc} />
+      )
+    }
   return (
     <View style={styles.container}>
 
@@ -31,8 +43,14 @@ const TaskScreen = () => {
         }
       </View>
 
+
+
+      <View>
+        <Button title='change face' onPress={() => changeImage()}></Button>
+        
+      </View>
       <View style={styles.sassagotchiSection}>
-        <Image source={require('../assets/Happy-face.gif')} />
+        {renderImage()}
       </View>
 
       <View style={styles.addTaskSection}>
