@@ -1,9 +1,10 @@
 import React from 'react';
 import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import TaskScreen from './screens/TaskScreen';
+import TaskList from './screens/TaskList';
 import {Container,Content} from 'native-base';
 import Swiper from 'react-native-swiper';
 import Monster from './screens/Monster';
+import TaskPage from './screens/TaskPage';
 
 export default function App() {
   return (
@@ -12,8 +13,8 @@ export default function App() {
         showsPagination={false}
         index={1}>
           <Monster/>
-          <TaskScreen/>
-          <Text>Task Page</Text>
+          <TaskList/>
+          <TaskPage/>
         </Swiper> 
   );
 }

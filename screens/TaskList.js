@@ -7,7 +7,7 @@ import Task from '../components/Task';
 
 
 
-const TaskScreen = () => {
+const TaskList = () => {
   const [taskItems, setTaskItems] = useState([])
   const [task, setTask] = useState();
   const addTask = () => { 
@@ -85,4 +85,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default TaskScreen;
+export default TaskList;

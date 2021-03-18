@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 
-const Monster = () => {
+const TaskPage = () => {
   return (
     <View style={styles.monster}>
       <Image source={require('../assets/SassSquash.gif')}/>
@@ -17,4 +17,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Monster;
+export default TaskPage;
