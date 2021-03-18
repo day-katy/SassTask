@@ -4,7 +4,7 @@ import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, Text
 const Monster = () => {
   return (
     <View style={styles.monster}>
-      <Image source={require('../assets/SassSquash.gif')}/>
+      <Image source={require('../assets/SasSquash.gif')}/>
     </View>
   )
 };
