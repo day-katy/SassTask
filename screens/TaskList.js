@@ -1,19 +1,32 @@
-import React, {useState} from 'react'; 
+import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView, Keyboard } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView, Keyboard, Button } from 'react-native';
 import Task from '../components/Task';
-
-
-
 
 
 const TaskList = () => {
   const [taskItems, setTaskItems] = useState([])
   const [task, setTask] = useState();
-  const addTask = () => { 
+  const addTask = () => {
     Keyboard.dismiss();
     setTaskItems([...taskItems, task])
     setTask('');
+    setMessage('');
+  }
+  const [message, setMessage] = useState("");
+
+  const yesButton = () => {
+    setMessage("You go gurrl");
+    completeTask();
+  }
+  const noButton = () => {
+    setMessage("You siken me");
+    completeTask();
+  }
+  const completeTask = (index) => {
+    let itemsCopy = [...taskItems];
+    itemsCopy.splice(index, 1);
+    setTaskItems(itemsCopy);
   }
   return (
     <View style={styles.container}>
@@ -24,16 +37,29 @@ const TaskList = () => {
 
       <View style={styles.taskList}>{
           taskItems.map((item, index) => {
-            return <Task key = {index} text={item} />
+            return (
+                <View style={styles.tasks}>
+                 <Task key = {index} text={item} />
+                 <View style={styles.taskButtons}>
+                  <View style={styles.yesButton}>
+                    <Button title='Y' onPress={() => yesButton()}></Button>
+                   </View>
+                   <View style={styles.noButton}>
+                    <Button title='N' onPress={() => noButton()}></Button>
+                   </View>
+                 </View>
+                </View>
+             )
           })
         }
+        <Text>{message}</Text>
       </View>
 
       <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.addTaskSection}>
         <View style={styles.addTask}>
         <TextInput placeholder={'Add task'} value={task} onChangeText={text => setTask(text)} />
         </View>
- 
+
         <TouchableOpacity onPress ={() => addTask()} style={styles.addTaskButton}>
           <View>
             <Text>
@@ -41,7 +67,7 @@ const TaskList = () => {
               </Text>
             </View>
           </TouchableOpacity>
-      
+
       </KeyboardAvoidingView>
     </View>
   )
@@ -92,6 +118,20 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     textAlign: 'center'
+  },
+  tasks: {
+    alignContent: 'center',
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  yesButton: {
+    backgroundColor: 'skyblue',
+    borderRadius: 7,
+
+  },
+  noButton: {
+    backgroundColor: 'orange',
+    borderRadius: 7,
   }
 });
 
