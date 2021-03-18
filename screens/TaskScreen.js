@@ -6,7 +6,7 @@ import happyPNG from '../assets/Happy-face.png'
 import unhappyPNG from '../assets/Unhappy-face.png'
 import happyGif from '../assets/Happy-face.gif'
 import unhappyGif from '../assets/Unhappy-face.gif'
-
+import straightPNG from '../assets/Straight-face.png'
 
 const TaskScreen = () => {
 
@@ -17,20 +17,24 @@ const TaskScreen = () => {
     setTaskItems([...taskItems, task]);
     setTask('');
   };
-  const [imageSrc, setImageSrc] = useState(happyGif);
+  const [imageSrc, setImageSrc] = useState(straightPNG);
+  const [message, setMessage] = useState("");
 
   const changeImage = () => {
     if (imageSrc === happyGif) {
       setImageSrc(unhappyGif);
+      setMessage("Is that the best you got?")
     } else {
       setImageSrc(happyGif);
+      setMessage("Great job!")
     }
   }
 
   const renderImage = () => {
       return (
         <View>
-          <Image source={imageSrc} />
+          <Image source={imageSrc} style={styles.sassagotchi}/>
+          <Text style={styles.messageText}>{message}</Text>
         </View>
       )
     }
@@ -111,8 +115,16 @@ const styles = StyleSheet.create({
     fontSize: 40,
   },
   sassagotchiSection: {
-    width: 64,
+    alignItems: 'center',
+    margin: 10,
+  },
+  sassagotchi: {
     height: 64,
+    width: 64,
+    alignSelf: 'center'
+  },
+  messageText: {
+    alignSelf: 'center'
   },
 });
 
