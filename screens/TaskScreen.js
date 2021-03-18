@@ -23,11 +23,21 @@ const TaskScreen = () => {
   const changeImage = () => {
     if (imageSrc === happyGif) {
       setImageSrc(unhappyGif);
-      setMessage("Is that the best you got?")
+      setMessage("Is that the best you got?");
     } else {
       setImageSrc(happyGif);
-      setMessage("Great job!")
+      setMessage("Great job!");
     }
+  }
+
+  const changeImageBad = () => {
+    setImageSrc(unhappyGif);
+    setMessage("Is that the best you got?");
+  }
+
+  const changeImageGood = () => {
+    setImageSrc(happyGif);
+    setMessage("Great job!");
   }
 
   const renderImage = () => {
@@ -38,6 +48,7 @@ const TaskScreen = () => {
         </View>
       )
     }
+
   return (
     <View style={styles.container}>
 
@@ -49,15 +60,21 @@ const TaskScreen = () => {
       <View style={styles.taskList}>
         {
           taskItems.map((item, index) => {
-            return <Task key = {index} text={item} />
+            return (
+              <TouchableOpacity style={styles.task}>
+                <Task key = {index} text={item} />
+                <Button title='Complete' onPress={() => changeImageGood()}></Button>
+                <Button title='Incomplete' onPress={() => changeImageBad()}></Button>
+              </TouchableOpacity>
+            )
           })
         }
       </View>
 
       <View style={styles.sassagotchiSection}>
-        <TouchableOpacity onPress={() => changeImage()}>
+        <View>
           {renderImage()}
-        </TouchableOpacity>
+        </View>
       </View>
 
       <View style={styles.addTaskSection}>
@@ -84,6 +101,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightsalmon',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  taskList: {
+  },
+  task: {
+    backgroundColor: 'white',
+    borderRadius: 15,
+    display: 'flex',
+    flexDirection: 'row',
   },
   addTaskSection: {
     display: 'flex',
