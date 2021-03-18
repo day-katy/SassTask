@@ -15,30 +15,14 @@ exports[`<App /> renders correctly 1`] = `
     <Text
       style={
         Object {
-          "backgroundColor": "blue",
+          "fontSize": 40,
         }
       }
     >
       Team SassTask!
     </Text>
   </View>
-  <View>
-    <View>
-      <Text>
-        task1
-      </Text>
-    </View>
-    <View>
-      <Text>
-        task2
-      </Text>
-    </View>
-    <View>
-      <Text>
-        dj khalid
-      </Text>
-    </View>
-  </View>
+  <View />
   <View
     style={
       Object {
@@ -62,14 +46,15 @@ exports[`<App /> renders correctly 1`] = `
     >
       <TextInput
         allowFontScaling={true}
-        placeholder="add task"
+        onChangeText={[Function]}
+        placeholder="Add task"
         rejectResponderTermination={true}
         underlineColorAndroid="transparent"
       />
     </View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -79,6 +64,7 @@ exports[`<App /> renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "backgroundColor": "#f05365",
           "borderColor": "grey",
           "borderRadius": 60,
@@ -92,7 +78,11 @@ exports[`<App /> renders correctly 1`] = `
         }
       }
     >
-      +
+      <View>
+        <Text>
+          +
+        </Text>
+      </View>
     </View>
   </View>
 </View>
