@@ -18,7 +18,7 @@ const TaskList = () => {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.title}>Team SassTask!</Text>
+        <Text style={styles.title}>SasSquash</Text>
         <StatusBar style="auto" />
       </View>
 
@@ -29,7 +29,7 @@ const TaskList = () => {
         }
       </View>
 
-      <View style={styles.addTaskSection}>
+      <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.addTaskSection}>
         <View style={styles.addTask}>
         <TextInput placeholder={'Add task'} value={task} onChangeText={text => setTask(text)} />
         </View>
@@ -42,7 +42,7 @@ const TaskList = () => {
             </View>
           </TouchableOpacity>
       
-      </View>
+      </KeyboardAvoidingView>
     </View>
   )
 }
@@ -51,37 +51,47 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'lightsalmon',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   addTaskSection: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    margin: 10,
+    position: 'absolute',
+    bottom: 60,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center'
   },
   addTask: {
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+    maxWidth: 250,
     backgroundColor: 'white',
-    padding: 20,
     borderRadius: 60,
-    margin: 5,
+    borderColor: '#C0C0C0',
+    borderWidth: 1,
+    width: 250
   },
   addTaskButton: {
-    backgroundColor: '#f05365',
-    borderRadius: 60,
-    borderColor: 'grey',
-    textAlign: 'center',
+    width: 60,
+    height: 60,
+    backgroundColor: 'white',
+    justifyContent: 'center',
     alignItems: 'center',
-    height: 40,
-    width: 40,
-    display: 'flex',
-    margin: 10,
-    fontSize: 40,
-
+    borderRadius: 60,
+    borderColor: '#C0C0C0',
+    borderWidth: 1
   },
   title: {
     fontSize: 40,
+    fontWeight: 'bold',
+    paddingTop: 50,
+    textAlign: 'center'
+  },
+  taskList:{
+    paddingTop: 20,
+    position: 'relative',
+    width: '100%',
+    alignItems: 'center',
+    textAlign: 'center'
   }
 });
 

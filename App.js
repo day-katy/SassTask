@@ -8,13 +8,22 @@ import TaskPage from './screens/TaskPage';
 
 export default function App() {
   return (
-        <Swiper
-        loop ={false}
-        showsPagination={false}
-        index={1}>
-          <Monster/>
-          <TaskList/>
-          <TaskPage/>
-        </Swiper> 
+    <Container style={styles.EntireApp}>
+      <Swiper
+      loop ={false}
+      showsPagination={false}
+      index={1}>
+        <Monster/>
+        <TaskList/>
+        <TaskPage/>
+      </Swiper> 
+    </Container>
   );
 }
+
+const styles = StyleSheet.create({
+  EntireApp:{
+    flex: 1,
+    backgroundColor: 'lightsalmon'
+  }
+});
