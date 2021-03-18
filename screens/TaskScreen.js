@@ -4,7 +4,8 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingVi
 import Task from '../components/Task';
 import happyPNG from '../assets/Happy-face.png'
 import unhappyPNG from '../assets/Unhappy-face.png'
-
+import happyGif from '../assets/Happy-face.gif'
+import unhappyGif from '../assets/Unhappy-face.gif'
 
 
 const TaskScreen = () => {
@@ -16,15 +17,21 @@ const TaskScreen = () => {
     setTaskItems([...taskItems, task]);
     setTask('');
   };
-  const [imageSrc, setImageSrc] = useState(happyPNG);
+  const [imageSrc, setImageSrc] = useState(happyGif);
 
   const changeImage = () => {
-    setImageSrc(unhappyPNG);
+    if (imageSrc === happyGif) {
+      setImageSrc(unhappyGif);
+    } else {
+      setImageSrc(happyGif);
+    }
   }
 
   const renderImage = () => {
       return (
-        <Image source={imageSrc} />
+        <View>
+          <Image source={imageSrc} />
+        </View>
       )
     }
   return (
@@ -43,14 +50,10 @@ const TaskScreen = () => {
         }
       </View>
 
-
-
-      <View>
-        <Button title='change face' onPress={() => changeImage()}></Button>
-        
-      </View>
       <View style={styles.sassagotchiSection}>
-        {renderImage()}
+        <TouchableOpacity onPress={() => changeImage()}>
+          {renderImage()}
+        </TouchableOpacity>
       </View>
 
       <View style={styles.addTaskSection}>
