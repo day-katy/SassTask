@@ -28,14 +28,22 @@ I would like to see the multiple tasks that I need to do.
 
 As a sassquatch who is extremely goal driven,
 so I can see what tasks I have actually accomplished,
-I would like to check off tasks as  being completed.
+I would like to check off tasks as being completed.
+
+As a sassquatch who is just as human as the next person,
+so I can mark tasks that I haven't completed,
+I would like to mark tasks as not being completed.
+
+As a sassquatch who is a neat-freak,
+so I can only see the tasks that I still need to do,
+I would like tasks that I've marked to disappear (perhaps to a completed and not-completed screen).
 
 As a sassquatch who needs a lot of validation,
 so I can get feedback that is appropriate to finishing a task,
 I would like celebratory visual and verbal recognition of my accomplishments.
 
 As a sassquatch that needs a kick up the arse,
-so I can get feedback that is appropriate to not completing a task on the day it is created,
+so I can get feedback that is appropriate to not completing a task,
 I would like sassy and slightly derogatory recognition of my failure. 
 
 ```
