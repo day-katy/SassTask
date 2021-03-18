@@ -3,13 +3,14 @@ import { StyleSheet, Text, View } from 'react-native';
 
 const Task = (props) => {
   return (
-    <View style={styles.tasks}>
-      <Text>{props.text}</Text>
+    <View>
+      <Text style={styles.tasks}>{props.text}</Text>
     </View>
   )
 }
 const styles = StyleSheet.create({
   tasks: {
+    padding: 12,
   },
 });
 

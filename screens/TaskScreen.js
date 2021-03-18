@@ -62,9 +62,9 @@ const TaskScreen = () => {
           taskItems.map((item, index) => {
             return (
               <TouchableOpacity style={styles.task}>
-                <Task key = {index} text={item} />
-                <Button title='Complete' onPress={() => changeImageGood()}></Button>
-                <Button title='Incomplete' onPress={() => changeImageBad()}></Button>
+                <Task key = {index} text={item}/>
+                <Button title='Y' onPress={() => changeImageGood()}></Button>
+                <Button title='N' onPress={() => changeImageBad()}></Button>
               </TouchableOpacity>
             )
           })
@@ -102,13 +102,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  taskList: {
-  },
   task: {
     backgroundColor: 'white',
     borderRadius: 15,
     display: 'flex',
     flexDirection: 'row',
+    margin: 5,
+    alignContent: 'center'
   },
   addTaskSection: {
     display: 'flex',
