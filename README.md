@@ -36,7 +36,7 @@ I would like to mark tasks as not being completed.
 
 As a sassquatch who is a neat-freak,
 so I can only see the tasks that I still need to do,
-I would like tasks that I've marked to disappear (perhaps to a completed and not-completed screen).
+I would like tasks that I've marked to disappear.
 
 As a sassquatch who needs a lot of validation,
 so I can get feedback that is appropriate to finishing a task,
