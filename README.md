@@ -1,14 +1,15 @@
 # SassTask
 
-This is our  final project for Makers Academy. This is a mobile app.
+This is our final project for Makers Academy. This is a mobile app.
 
 ## To Run This App
 
-
 ## Wireframe
+
 https://wireframe.cc/pro/pp/21df94671423933
 
 ### MVP User Stories
+
 ```
 As a sassquatch who has a thing to get done,
 so I can remember what I need to get done,
@@ -19,12 +20,12 @@ so I can see what I need to get done,
 I would like to see the task that I need to do.
 
 As a sassquatch who has a whole ton of stuff to get done,
-so I can remember how incredibly busy I am, 
-I would like to create multiple tasks that I need to do. 
+so I can remember how incredibly busy I am,
+I would like to create multiple tasks that I need to do.
 
 As a sassquatch who has a whole ton of stuff to get done,
-so I can see how incredibly busy I am, 
-I would like to see the multiple tasks that I need to do. 
+so I can see how incredibly busy I am,
+I would like to see the multiple tasks that I need to do.
 
 As a sassquatch who is extremely goal driven,
 so I can see what tasks I have actually accomplished,
@@ -44,12 +45,12 @@ I would like celebratory visual and verbal recognition of my accomplishments.
 
 As a sassquatch that needs a kick up the arse,
 so I can get feedback that is appropriate to not completing a task,
-I would like sassy and slightly derogatory recognition of my failure. 
+I would like sassy and slightly derogatory recognition of my failure.
 
 ```
 
-
 ### Further User Stories
+
 ```
 As a private and reclusive sassquatch,
 so I can have my own to do list that no one else can see,
@@ -73,7 +74,7 @@ I would like to see a separate list of my completed tasks.
 
 As a sassquatch that has a schedule to keep,
 so I can keep track of when things need to be completed,
-I would like to be able to set deadlines for tasks. 
+I would like to be able to set deadlines for tasks.
 
 As a sassquatch who has an eye on the longterm future,
 so I can keep tabs on my overarching goals,
@@ -84,7 +85,7 @@ so I can feel a rush of dopamine to my large heaad,
 I would like to have a creature whose health is tied to how good I am at accomplishing my to do list.
 
 As a sassquatch who needs constant validation,
-so I can continue to have incireased rushes of dopamine,
+so I can continue to have increased rushes of dopamine,
 I would like my creature to be able to grow/evolve when I am super good at my to do list.
 
 As a sassquatch who needs a bigger kick up the arse,
