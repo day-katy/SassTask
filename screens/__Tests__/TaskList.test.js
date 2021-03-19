@@ -5,14 +5,21 @@ import TaskList from '../../screens/TaskList';
 import Task from '../../components/Task';
 
 test('renders the app title', () => {
-    const { getByTestId } = render(<TaskList TestId="title"/>);
+    const { getByTestId } = render(<TaskList TestId='title'/>);
 
-    expect(getByTestId("title")).toHaveTextContent('SasSquash');
+    expect(getByTestId('title')).toHaveTextContent('SasSquash');
+});
+
+test('renders the right background color', () => {
+    const { getByTestId } = render(<TaskList TestId='container'/>);
+
+    expect(getByTestId('container')).toHaveStyle({ backgroundColor: 'lightsalmon' });
+
 });
 
 test('renders a task', () => {
-    const { getByText, queryByText } = render(<Task text="Test task" />);
+    const { getByText, queryByText } = render(<Task text='Test task' />);
 
-    expect(getByText("Test task")).not.toBeNull();
+    expect(getByText('Test task')).not.toBeNull();
     expect(queryByText('ASDF')).toBeNull();
 });
