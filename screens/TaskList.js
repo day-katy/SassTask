@@ -9,18 +9,25 @@ const TaskList = () => {
   const [task, setTask] = useState();
   const addTask = () => {
     Keyboard.dismiss();
-    setTaskItems([...taskItems, task])
+    setTaskItems([...taskItems, task]);
     setTask('');
     setMessage('');
   }
+
+  const [completedTasks, setCompletedTasks] = useState([]);
+
+  const [incompleteTasks, setIncompleteTasks] = useState([]);
+
   const [message, setMessage] = useState("");
 
-  const yesButton = () => {
+  const yesButton = (item) => {
     setMessage("You go gurrl");
+    setCompletedTasks([...completedTasks, item]);
     completeTask();
   }
-  const noButton = () => {
-    setMessage("You siken me");
+  const noButton = (item) => {
+    setMessage("You sicken me");
+    setIncompleteTasks([...incompleteTasks, item]);
     completeTask();
   }
   const completeTask = (index) => {
@@ -29,7 +36,7 @@ const TaskList = () => {
     setTaskItems(itemsCopy);
   }
   return (
-    
+
     <ScrollView testID='container' style={styles.container}>
       <View>
         <Text testID="title" style={styles.title}>SasSquash</Text>
@@ -39,17 +46,17 @@ const TaskList = () => {
       <View style={styles.taskList}>{
           taskItems.map((item, index) => {
             return (
-                <View style={styles.tasks}>
-                 <Task key = {index} text={item} />
+                <TouchableOpacity key = {index} style={styles.tasks} onPress={ () => completeTask()} >
+                 <Task  text={item} />
                  <View style={styles.taskButtons}>
                   <View style={styles.yesButton}>
-                    <Button title='Y' onPress={() => yesButton()}></Button>
+                    <Button title='Y' onPress={() => yesButton(item)}></Button>
                    </View>
                    <View style={styles.noButton}>
-                    <Button title='N' onPress={() => noButton()}></Button>
+                    <Button title='N' onPress={() => noButton(item)}></Button>
                    </View>
                  </View>
-                </View>
+                </TouchableOpacity>
              )
           })
         }
