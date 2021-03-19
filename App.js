@@ -8,7 +8,7 @@ import TaskPage from './screens/TaskPage';
 
 export default function App() {
   return (
-    <Container style={styles.EntireApp}>
+    <Container testID= "entireAppWrapper" style={styles.EntireApp}>
       <Swiper
       loop ={false}
       showsPagination={false}
