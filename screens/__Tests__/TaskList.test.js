@@ -1,12 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
+import '@testing-library/jest-native/extend-expect';
 import TaskList from '../../screens/TaskList';
 import Task from '../../components/Task';
 
 test('renders the app title', () => {
-    const { getByText } = render(<TaskList text="SasSquash" />);
+    const { getByTestId } = render(<TaskList TestId="title"/>);
 
-    expect(getByText("SasSquash")).not.toBeNull();
+    expect(getByTestId("title")).toHaveTextContent('SasSquash');
 });
 
 test('renders a task', () => {
