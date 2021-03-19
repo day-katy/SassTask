@@ -1,8 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
+import { render, fireEvent } from '@testing-library/react-native';
 import '@testing-library/jest-native/extend-expect';
 import TaskList from '../../screens/TaskList';
-import { TextInput } from 'react-native';
 
 test('renders the app title', () => {
     const { getByTestId } = render(<TaskList/>);
@@ -17,9 +16,19 @@ test('renders the right background color', () => {
 });
 
 test('textInput receives a placeholder prop', () => {
-    const { getByTestId } = render(<TaskList testprop="Here"/>);
+    const { getByTestId } = render(<TaskList/>);
 
     expect(getByTestId('addTaskTextInput').props).toEqual(expect.objectContaining({
         "placeholder": "Add task"
     }))
+});
+
+test('can click the addTask button', () => {
+    const onPressMock = jest.fn();
+
+    const { getByTestId } = render(<TouchableOpacity onPress={onPressMock}/>)
+
+    fireEvent.press(getByTestId("addTaskButton"));
+    expect(onPressMock).toHaveBeenCalled();
+
 });
