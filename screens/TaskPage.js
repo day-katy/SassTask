@@ -1,15 +1,16 @@
 import React, {useState} from 'react';
 import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 
-const TaskPage = (props) => {
+const TaskPage = ({completedTasks, incompleteTasks}) => {
 
-  const interpretTasks = () => {
-    // console.log(props.taskInfo);
-  }
+  // const interpretTasks = () => {
+    console.log(completedTasks);
+    console.log(incompleteTasks);
+  // }
 
   return (
     <View style={styles.monster}>
-      <Text style={styles.title}>{props.dummy}</Text>
+      <Text style={styles.title}>Feedback Here!</Text>
       <Image source={require('../assets/SnapSquash.gif')}/>
     </View>
   )

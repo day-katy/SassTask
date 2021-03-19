@@ -4,35 +4,33 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingVi
 import Task from '../components/Task';
 
 
-const TaskList = ({setDummy, taskInfo, setTaskInfo}) => {
+const TaskList = ({setCompletedTasks, setIncompletedTasks, completedTasks, incompleteTasks}) => {
   const [taskItems, setTaskItems] = useState([])
   const [task, setTask] = useState();
   const addTask = () => {
     Keyboard.dismiss();
     setTaskItems([...taskItems, task]);
-    setTaskInfo([...taskInfo, task]);
     setTask('');
     setMessage('');
   }
-
-  const [completedTasks, setCompletedTasks] = useState([]);
-
-  const [incompleteTasks, setIncompletedTasks] = useState([]);
 
   const [message, setMessage] = useState("");
 
   const yesButton = (item) => {
     setMessage("You go gurrl");
+    // console.log(completedTasks);
+    // let tmp = completedTasks;
+    // console.log(tmp);
+    // tmp.push(item);
+    // setCompletedTasks(completedTasks.concat([item]));
     setCompletedTasks([...completedTasks, item]);
     completeTask();
-    setDummy("You go gurrl");
     // callBack();
   }
   const noButton = (item) => {
     setMessage("You sicken me");
     setIncompletedTasks([...incompleteTasks, item]);
     completeTask();
-    setDummy("You sicken me");
   }
   const completeTask = (index) => {
     let itemsCopy = [...taskItems];

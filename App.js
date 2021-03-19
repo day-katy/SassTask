@@ -7,8 +7,8 @@ import Monster from './screens/Monster';
 import TaskPage from './screens/TaskPage';
 
 export default function App() {
-  const [dummy, setDummy] = useState(['']);
-  const [taskInfo, setTaskInfo] = useState([]);
+  const [completedTasks, setCompletedTasks] = useState([]);
+  const [incompleteTasks, setIncompletedTasks] = useState([]);
 
   return (
     <Container style={styles.EntireApp}>
@@ -16,9 +16,12 @@ export default function App() {
       loop ={false}
       showsPagination={false}
       index={1}>
-        <Monster dummy={dummy}/>
-        <TaskList setDummy={setDummy} taskInfo={taskInfo} setTaskInfo={setTaskInfo} />
-        <TaskPage  dummy={dummy} taskInfo={taskInfo}/>
+        <Monster />
+        <TaskList setCompletedTasks={setCompletedTasks} 
+                  setIncompletedTasks={setIncompletedTasks} 
+                  completedTasks={completedTasks} 
+                  incompleteTasks={incompleteTasks} />
+        <TaskPage completedTasks={completedTasks} incompleteTasks={incompleteTasks} />
       </Swiper> 
     </Container>
   );

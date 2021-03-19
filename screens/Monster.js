@@ -5,7 +5,7 @@ import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, Text
 const Monster = (props) => {
   return (
     <View style={styles.monster}>
-        <Text style={styles.title}>{props.dummy}</Text>
+      <Text style={styles.title}>Feedback Here!</Text>
       <Image source={require('../assets/SasSquash.gif')}/>
     </View>
   )
