@@ -27,7 +27,7 @@ const TaskList = () => {
   }
   const noButton = (item) => {
     setMessage("You sicken me");
-    setIncompletedTasks([...incompleteTasks, item]);
+    setIncompleteTasks([...incompleteTasks, item]);
     completeTask();
   }
   const completeTask = (index) => {
