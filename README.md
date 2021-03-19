@@ -4,6 +4,7 @@ This is our final project for Makers Academy. This is a mobile app.
 
 ## To Run This App
 
+
 - Clone this repo
 - CD into SassTask and open the file
 - Run Yarn to install the dependencies
@@ -18,6 +19,7 @@ This is our final project for Makers Academy. This is a mobile app.
 
 - Install the ExpoGo app on your iphone.
 - Either enter 'i' into the terminal or scan the barcode with your phone camera.
+
 
 ## Wireframe
 
@@ -100,7 +102,7 @@ so I can feel a rush of dopamine to my large heaad,
 I would like to have a creature whose health is tied to how good I am at accomplishing my to do list.
 
 As a sassquatch who needs constant validation,
-so I can continue to have incireased rushes of dopamine,
+so I can continue to have increased rushes of dopamine,
 I would like my creature to be able to grow/evolve when I am super good at my to do list.
 
 As a sassquatch who needs a bigger kick up the arse,
