@@ -58,7 +58,7 @@ const TaskList = () => {
 
       <KeyboardAvoidingView style={styles.addTaskSection}>
         <View style={styles.addTask}>
-        <TextInput placeholder={'Add task'} value={task} onChangeText={text => setTask(text)} />
+        <TextInput testID='addTaskTextInput' placeholder={'Add task'} value={task} onChangeText={text => setTask(text)} />
         </View>
 
         <TouchableOpacity onPress ={() => addTask()} style={styles.addTaskButton}>
