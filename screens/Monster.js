@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import taskItems from './TaskList';
 
 
 const Monster = () => {
@@ -15,7 +16,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
+  
 });
 
 export default Monster;
