@@ -4,19 +4,20 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingVi
 import Task from '../components/Task';
 
 
-const TaskList = () => {
+const TaskList = ({setDummy, taskInfo, setTaskInfo}) => {
   const [taskItems, setTaskItems] = useState([])
   const [task, setTask] = useState();
   const addTask = () => {
     Keyboard.dismiss();
     setTaskItems([...taskItems, task]);
+    setTaskInfo([...taskInfo, task]);
     setTask('');
     setMessage('');
   }
 
   const [completedTasks, setCompletedTasks] = useState([]);
 
-  const [incompleteTasks, setIncompleteTasks] = useState([]);
+  const [incompleteTasks, setIncompletedTasks] = useState([]);
 
   const [message, setMessage] = useState("");
 
@@ -24,11 +25,14 @@ const TaskList = () => {
     setMessage("You go gurrl");
     setCompletedTasks([...completedTasks, item]);
     completeTask();
+    setDummy("You go gurrl");
+    // callBack();
   }
   const noButton = (item) => {
     setMessage("You sicken me");
     setIncompletedTasks([...incompleteTasks, item]);
     completeTask();
+    setDummy("You sicken me");
   }
   const completeTask = (index) => {
     let itemsCopy = [...taskItems];
@@ -38,15 +42,15 @@ const TaskList = () => {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.title}>SasSquash</Text>
+        <Text style={styles.title}>SaasSquash</Text>
         <StatusBar style="auto" />
       </View>
 
       <View style={styles.taskList}>{
           taskItems.map((item, index) => {
             return (
-                <View style={styles.tasks}>
-                 <Task key = {index} text={item} />
+                <View key={index} style={styles.tasks}>
+                 <Task text={item} />
                  <View style={styles.taskButtons}>
                   <View style={styles.yesButton}>
                     <Button title='Y' onPress={() => yesButton(item)}></Button>
