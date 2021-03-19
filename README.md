@@ -4,6 +4,23 @@ This is our final project for Makers Academy. This is a mobile app.
 
 ## To Run This App
 
+
+- Clone this repo
+- CD into SassTask and open the file
+- Run Yarn to install the dependencies
+- Run 'expo start'
+
+## Android user:
+
+- Install the ExpoGo app on your android.
+- Either enter 'a' into the terminal or scan the barcode with your phone camera.
+
+## Iphone user:
+
+- Install the ExpoGo app on your iphone.
+- Either enter 'i' into the terminal or scan the barcode with your phone camera.
+
+
 ## Wireframe
 
 https://wireframe.cc/pro/pp/21df94671423933
@@ -102,6 +119,14 @@ I would like to link my FitBit to my SassTask app.
 ```
 
 ## Current Test Coverage
+
+To run our tests:
+
+```
+yarn test
+```
+
+100% coverage
 
 ## Tests to Implement
 
