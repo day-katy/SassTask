@@ -9,6 +9,7 @@
     "test": "jest --coverage"
   },
   "dependencies": {
+    "@testing-library/jest-native": "^4.0.1",
     "expo": "^40.0.1",
     "expo-status-bar": "~1.0.3",
     "native-base": "^2.15.2",

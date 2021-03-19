@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView, Keyboard, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView, Keyboard, Button, ScrollView } from 'react-native';
 import Task from '../components/Task';
 
 
@@ -29,9 +29,10 @@ const TaskList = () => {
     setTaskItems(itemsCopy);
   }
   return (
-    <View style={styles.container}>
+    
+    <ScrollView style={styles.container}>
       <View>
-        <Text style={styles.title}>SasSquash</Text>
+        <Text testID="title" style={styles.title}>SasSquash</Text>
         <StatusBar style="auto" />
       </View>
 
@@ -55,7 +56,7 @@ const TaskList = () => {
         <Text>{message}</Text>
       </View>
 
-      <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.addTaskSection}>
+      <KeyboardAvoidingView style={styles.addTaskSection}>
         <View style={styles.addTask}>
         <TextInput placeholder={'Add task'} value={task} onChangeText={text => setTask(text)} />
         </View>
@@ -67,9 +68,8 @@ const TaskList = () => {
               </Text>
             </View>
           </TouchableOpacity>
-
       </KeyboardAvoidingView>
-    </View>
+    </ScrollView>
   )
 }
 
@@ -79,8 +79,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightsalmon',
   },
   addTaskSection: {
-    position: 'absolute',
-    bottom: 60,
+
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-around',
