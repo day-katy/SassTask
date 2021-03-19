@@ -45,8 +45,8 @@ const TaskList = () => {
       <View style={styles.taskList}>{
           taskItems.map((item, index) => {
             return (
-                <View style={styles.tasks}>
-                 <Task key = {index} text={item} />
+                <TouchableOpacity key = {index} style={styles.tasks} onPress={ () => completeTask()} >
+                 <Task  text={item} />
                  <View style={styles.taskButtons}>
                   <View style={styles.yesButton}>
                     <Button title='Y' onPress={() => yesButton(item)}></Button>
@@ -55,7 +55,7 @@ const TaskList = () => {
                     <Button title='N' onPress={() => noButton(item)}></Button>
                    </View>
                  </View>
-                </View>
+                </TouchableOpacity>
              )
           })
         }
