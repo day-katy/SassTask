@@ -1,4 +1,9 @@
-# SassTask
+# ----------------------------------------------------------------
+
+<h1 align='center'> SassTask </h1>
+
+# ----------------------------------------------------------------
+
 
 This is our final project for Makers Academy. This is a mobile app.
 
@@ -20,14 +25,23 @@ Run expo start to begin the app simulation
 ```
 expo start
 ```
+You may then run the app either with a local android/iphone simulator, within your web browser or with your own code following the instructions below: 
 
-## Android user:
+#### Android user:
 To use this app on Android:
+- Run expo start in your terminal 
+``` 
+expo start
+```
 - Install the ExpoGo app on your android.
 - scan the barcode with your phone camera.
 
-## Iphone user:
+#### Iphone user:
 To use this app on Iphone:
+- Run expo start in your terminal 
+```
+expo start
+```
 - Install the ExpoGo app on your iphone.
 - scan the barcode with your phone camera.
 
