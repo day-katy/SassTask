@@ -143,14 +143,19 @@ Currently all tests are passing with 100% Coverage.
 ## Features Implemented
 Here is a list of the currently implemented features on SassTask:
 * You can add tasks
+[]('./assets/Main_screen.png')
+* You can see a list of tasks
+[]('./assets/TaskList.png')
 * You can complete tasks
+[]('./assets/CompletreTask.png')
 * You can mark tasks as incomplete
+[]('./assets/IncompleteTask.png')
 * You can delete tasks
 * Your monster will provide feedback when you complete tasks
 * Your monster will provide feedback when you do not complete tasks
 
 ## Features to be implemented
-* 
+*
 
 ## Domain Modeling
 
