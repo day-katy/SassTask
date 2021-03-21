@@ -135,7 +135,7 @@ To run our tests run the following command in your terminal:
 ```
 yarn test
 ```
-![Tests screenshot](assets/Test_Coverage.png)
+<img src="assets/Test_Coverage.png">
 Currently all tests are passing with 100% Coverage.
 
 ## Tests to Implement
@@ -143,15 +143,18 @@ Currently all tests are passing with 100% Coverage.
 ## Features Implemented
 Here is a list of the currently implemented features on SassTask:
 * You can add tasks
-![Main screen](assets/Main_screen.png)
+<img src="assets/Main_screen.png" height='500'>
 * You can see a list of tasks
-![Tasklist screenshot](assets/TaskList.png)
+<img src="assets/TaskList.png" height='500'>
 * You can complete tasks
-![Complete tasks screenshot](assets/CompletreTask.png)
+<img src="assets/CompletreTask.png" height='500'>
 * You can mark tasks as incomplete
-![Incomplete tasks screenshot](assets/IncompleteTask.png)
+<img src="assets/IncompleteTask.png" height='500'>
+
 * You can delete tasks
+
 * Your monster will provide feedback when you complete tasks
+
 * Your monster will provide feedback when you do not complete tasks
 
 ## Features to be implemented
