@@ -140,14 +140,28 @@ Currently all tests are passing with 100% Coverage.
 
 ## Tests to Implement
 
+* You can add a task 
+* You can add more than one task and see them all 
+* You can complete a task 
+* Completing a task will remove it from the page 
+* You can mark a task as incomplete
+* You can delete a task 
+* Your monster will provide feedback when you complete a task 
+* Your monster will provide feedback if you do not complete a task 
+* You can update a task 
+
 ## Features Implemented
 Here is a list of the currently implemented features on SassTask:
+
 * You can add tasks
 <img src="assets/Main_screen.png" height='500'>
+
 * You can see a list of tasks
 <img src="assets/TaskList.png" height='500'>
+
 * You can complete tasks
 <img src="assets/CompletreTask.png" height='500'>
+
 * You can mark tasks as incomplete
 <img src="assets/IncompleteTask.png" height='500'>
 
@@ -158,9 +172,7 @@ Here is a list of the currently implemented features on SassTask:
 * Your monster will provide feedback when you do not complete tasks
 
 ## Features to be implemented
-*
-
-## Domain Modeling
+* You can update tasks 
 
 ## Planning
 Here is a link to our trello board:  
