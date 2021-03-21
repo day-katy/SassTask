@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { StyleSheet, View, TextInput } from 'react-native';
 
 const TaskInput = (props) => {
   return (
