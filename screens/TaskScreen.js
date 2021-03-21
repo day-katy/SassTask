@@ -21,8 +21,7 @@ const TaskScreen = () => {
         taskItems={taskItems}
         message={message}
         setMessage={setMessage}
-        setTaskItems={setTaskItems}
-      />
+        setTaskItems={setTaskItems}/>
 
       <KeyboardAvoidingView style={styles.addTaskSection}>
 
