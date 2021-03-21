@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView, Keyboard, Button, ScrollView } from 'react-native';
 import Task from '../components/Task';
+import TaskInput from '../components/TaskInput';
 
 
 const TaskList = () => {
@@ -64,9 +65,8 @@ const TaskList = () => {
       </View>
 
       <KeyboardAvoidingView style={styles.addTaskSection}>
-        <View style={styles.addTask}>
-        <TextInput testID='addTaskTextInput' placeholder={'Add task'} value={task} onChangeText={text => setTask(text)} />
-        </View>
+        <TaskInput
+        setTask ={setTask}/>
 
         <TouchableOpacity testID="addTaskButton" onPress ={() => addTask()} style={styles.addTaskButton}>
           <View>
@@ -86,21 +86,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightsalmon',
   },
   addTaskSection: {
-
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center'
-  },
-  addTask: {
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    maxWidth: 250,
-    backgroundColor: 'white',
-    borderRadius: 60,
-    borderColor: '#C0C0C0',
-    borderWidth: 1,
-    width: 250
   },
   addTaskButton: {
     width: 60,
