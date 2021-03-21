@@ -4,25 +4,36 @@ This is our final project for Makers Academy. This is a mobile app.
 
 ## To Run This App
 
-
-- Clone this repo
-- CD into SassTask and open the file
-- Run Yarn to install the dependencies
-- Run 'expo start'
+Clone this repo by running:
+```
+git clone git@github.com:day-katy/SassTask.git
+```
+Change into the Sastask directory:
+```
+cd SassTask
+```
+Install dependencies with Yarn
+```
+yarn
+```
+Run expo start to begin the app simulation
+```
+expo start
+```
 
 ## Android user:
-
+To use this app on Android:
 - Install the ExpoGo app on your android.
-- Either enter 'a' into the terminal or scan the barcode with your phone camera.
+- scan the barcode with your phone camera.
 
 ## Iphone user:
-
+To use this app on Iphone:
 - Install the ExpoGo app on your iphone.
-- Either enter 'i' into the terminal or scan the barcode with your phone camera.
+- scan the barcode with your phone camera.
 
 
 ## Wireframe
-
+Here is the initial wireframe design of our app:
 https://wireframe.cc/pro/pp/21df94671423933
 
 ### MVP User Stories
@@ -120,18 +131,29 @@ I would like to link my FitBit to my SassTask app.
 
 ## Current Test Coverage
 
-To run our tests:
-
+To run our tests run the following command in your terminal:
 ```
 yarn test
 ```
-
-100% coverage
+[]('./assests/Test_Coverage.png')
+Currently all tests are passing with 100% Coverage.
 
 ## Tests to Implement
 
 ## Features Implemented
+Here is a list of the currently implemented features on SassTask:
+* You can add tasks
+* You can complete tasks
+* You can mark tasks as incomplete
+* You can delete tasks
+* Your monster will provide feedback when you complete tasks
+* Your monster will provide feedback when you do not complete tasks
+
+## Features to be implemented
+* 
 
 ## Domain Modeling
 
 ## Planning
+Here is a link to our trello board:  
+https://trello.com/b/rr9Ps79i/sasstask
