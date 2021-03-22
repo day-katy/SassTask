@@ -4,9 +4,10 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingVi
 import Task from '../components/Task';
 
 
-const TaskList = ({setCompletedTasks, setIncompletedTasks, completedTasks, incompleteTasks}) => {
+const TaskList = ({setCompletedTasks, setIncompletedTasks, completedTasks, incompleteTasks, message, setMessage}) => {
   const [taskItems, setTaskItems] = useState([])
   const [task, setTask] = useState();
+
   const addTask = () => {
     Keyboard.dismiss();
     setTaskItems([...taskItems, task]);
@@ -14,21 +15,14 @@ const TaskList = ({setCompletedTasks, setIncompletedTasks, completedTasks, incom
     setMessage('');
   }
 
-  const [message, setMessage] = useState("");
-
   const yesButton = (item) => {
     setMessage("You go gurrl");
-    // console.log(completedTasks);
-    // let tmp = completedTasks;
-    // console.log(tmp);
-    // tmp.push(item);
-    // setCompletedTasks(completedTasks.concat([item]));
     setCompletedTasks([...completedTasks, item]);
     completeTask();
-    // callBack();
+
   }
   const noButton = (item) => {
-    setMessage("You sicken me");
+    setMessage("Disappointing");
     setIncompletedTasks([...incompleteTasks, item]);
     completeTask();
   }
@@ -61,7 +55,6 @@ const TaskList = ({setCompletedTasks, setIncompletedTasks, completedTasks, incom
              )
           })
         }
-        <Text>{message}</Text>
       </View>
 
       <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.addTaskSection}>

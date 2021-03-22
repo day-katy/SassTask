@@ -9,6 +9,8 @@ import TaskPage from './screens/TaskPage';
 export default function App() {
   const [completedTasks, setCompletedTasks] = useState([]);
   const [incompleteTasks, setIncompletedTasks] = useState([]);
+  const [message, setMessage] = useState("");
+  const [imageSrc, setImageSrc] = useState(require('../assets/Sassagotchi-egg-coloured.gif'));
 
   return (
     <Container style={styles.EntireApp}>
@@ -17,12 +19,17 @@ export default function App() {
       showsPagination={false}
       index={1}>
         <Monster />
-        <TaskList setCompletedTasks={setCompletedTasks} 
-                  setIncompletedTasks={setIncompletedTasks} 
-                  completedTasks={completedTasks} 
-                  incompleteTasks={incompleteTasks} />
-        <TaskPage completedTasks={completedTasks} incompleteTasks={incompleteTasks} />
-      </Swiper> 
+        <TaskList setCompletedTasks={setCompletedTasks}
+                  setIncompletedTasks={setIncompletedTasks}
+                  completedTasks={completedTasks}
+                  incompleteTasks={incompleteTasks}
+                  message={message}
+                  setMessage={setMessage} />
+        <TaskPage completedTasks={completedTasks}
+         incompleteTasks={incompleteTasks}
+          message={message}
+           />
+      </Swiper>
     </Container>
   );
 }
