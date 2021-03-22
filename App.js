@@ -5,6 +5,7 @@ import {Container,Content} from 'native-base';
 import Swiper from 'react-native-swiper';
 import Monster from './screens/Monster';
 import TaskPage from './screens/TaskPage';
+import styles from './Styles/stylesheet';
 
 export default function App() {
   return (
@@ -16,14 +17,7 @@ export default function App() {
         <Monster/>
         <TaskScreen/>
         <TaskPage/>
-      </Swiper> 
+      </Swiper>
     </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  EntireApp:{
-    flex: 1,
-    backgroundColor: 'lightsalmon'
-  }
-});

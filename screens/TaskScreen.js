@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
 import { StyleSheet, KeyboardAvoidingView, ScrollView } from 'react-native';
 import TaskInput from '../components/TaskInput';
-import AddTaskButton from '../components/AddTaskButton';
 import TaskList from '../components/TaskList';
 import Title from '../components/Title';
-
+import styles from '../Styles/stylesheet';
 
 const TaskScreen = () => {
 
@@ -26,31 +25,17 @@ const TaskScreen = () => {
       <KeyboardAvoidingView style={styles.addTaskSection}>
 
         <TaskInput
-          setTask ={setTask}/>
-
-        <AddTaskButton
+          setTask ={setTask}
           setTaskItems={setTaskItems}
           taskItems={taskItems}
           task={task}
           setTask ={setTask}
           setMessage={setMessage}/>
+
       </KeyboardAvoidingView>
-      
+
     </ScrollView>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'lightsalmon',
-  },
-  addTaskSection: {
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center'
-  },
-});
 
 export default TaskScreen;
