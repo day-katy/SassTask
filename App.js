@@ -12,23 +12,12 @@ export default function App() {
   const [message, setMessage] = useState("");
   const [imageSrc, setImageSrc] = useState(require('./assets/Sassagotchi-egg-coloured.gif'));
 
-  const monsterPicker = () => {
-    if(completedTasks.length >= 3) {
-      setImageSrc('./assets/SnapSquash.gif')
-    } else if(completedTasks >= 1) {
-      setImageSrc('./assets/SasSquash.gif')
-    } else {
-      setImageSrc('./assets/Sassagotchi-egg-coloured.gif')
-    }
-  }
-
   return (
     <Container style={styles.EntireApp}>
       <Swiper
       loop ={false}
       showsPagination={false}
-      index={1}
-      onIndexChanged={monsterPicker()}>
+      index={1}>
         <Monster />
         <TaskList setCompletedTasks={setCompletedTasks}
                   setIncompletedTasks={setIncompletedTasks}
@@ -40,6 +29,7 @@ export default function App() {
          incompleteTasks={incompleteTasks}
           message={message}
           imageSrc={imageSrc}
+          setImageSrc={setImageSrc}
            />
       </Swiper>
     </Container>

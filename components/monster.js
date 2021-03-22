@@ -4,24 +4,22 @@ import egg from '../assets/Sassagotchi-egg-coloured.gif';
 import teen from '../assets/SasSquash.gif';
 import Sassquash from '../assets/SnapSquash.gif';
 
-const monster = ({imageSrc}) => {
+const monster = ({ imageSrc, setImageSrc, completedTasks }) => {
 
-  // const [imageSrc, setImageSrc] = useState(require('../assets/Sassagotchi-egg-coloured.gif'))
-
-  // const monsterPicker = () => {
-  //   if(completedTasks.length >= 3) {
-  //     setImageSrc('../assets/SnapSquash.gif')
-  //   } else if(completedTasks >= 1) {
-  //     setImageSrc('../assets/SasSquash.gif')
-  //   } else {
-  //     setImageSrc('../assets/Sassagotchi-egg-coloured.gif')
-  //   }
-  // }
+  const monsterPicker = () => {
+    if(completedTasks.length >= 3) {
+      return setImageSrc(require('../assets/SnapSquash.gif'))
+    } else if(completedTasks.length > 0) {
+      return setImageSrc(require('../assets/SasSquash.gif'))
+    } else {
+      return setImageSrc(require('../assets/Sassagotchi-egg-coloured.gif'))
+    }
+  }
 
   return (
-    <View>
+    <TouchableOpacity onPress={() => monsterPicker()}>
       <Image source={imageSrc}/>
-    </View>
+    </TouchableOpacity>
   )
 }
 
