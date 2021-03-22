@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
 import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import Monster from '../components/monster';
 
-const TaskPage = () => {
+const TaskPage = ({completedTasks, message, imageSrc, setImageSrc}) => {
+
   return (
     <View style={styles.monster}>
-      <Image source={require('../assets/SnapSquash.gif')}/>
+      <Text style={styles.title}>Completed tasks: {completedTasks.length}</Text>
+      <Text style={styles.title}>{message}</Text>
+      <Monster imageSrc={imageSrc} setImageSrc={setImageSrc} completedTasks={completedTasks} />
     </View>
   )
 };
@@ -18,3 +22,4 @@ const styles = StyleSheet.create({
 });
 
 export default TaskPage;
+// <Image source={require('../assets/SnapSquash.gif')}/>

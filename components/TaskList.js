@@ -10,18 +10,15 @@ const TaskList = (props) => {
     props.setTaskItems(itemsCopy);
   }
 
-  const [completedTasks, setCompletedTasks] = useState([]);
-  const [incompleteTasks, setIncompleteTasks] = useState([]);
-
   const yesButton = (item) => {
     props.setMessage("You go gurrl");
-    setCompletedTasks([...completedTasks, item]);
+    props.setCompletedTasks([...props.completedTasks, item]);
     completeTask();
   }
 
   const noButton = (item) => {
     props.setMessage("You sicken me");
-    setIncompleteTasks([...incompleteTasks, item]);
+    props.setIncompleteTasks([...props.incompleteTasks, item]);
     completeTask();
   }
 
@@ -44,7 +41,6 @@ const TaskList = (props) => {
          )
       })
     }
-    <Text>{props.message}</Text>
   </View>
   );
 }

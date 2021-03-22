@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import TaskScreen from './screens/TaskScreen';
 import {Container,Content} from 'native-base';
@@ -8,15 +8,32 @@ import TaskPage from './screens/TaskPage';
 import styles from './Styles/stylesheet';
 
 export default function App() {
+  const [completedTasks, setCompletedTasks] = useState([]);
+  const [incompleteTasks, setIncompleteTasks] = useState([]);
+  const [message, setMessage] = useState("");
+  const [imageSrc, setImageSrc] = useState(require('./assets/Sassagotchi-egg-coloured.gif'));
+
   return (
+    
     <Container testID= "entireAppWrapper" style={styles.EntireApp}>
       <Swiper
       loop ={false}
       showsPagination={false}
       index={1}>
-        <Monster/>
-        <TaskScreen/>
-        <TaskPage/>
+        <Monster />
+        <TaskScreen setCompletedTasks={setCompletedTasks}
+                  setIncompleteTasks={setIncompleteTasks}
+                  completedTasks={completedTasks}
+                  incompleteTasks={incompleteTasks}
+                  message={message}
+                  setMessage={setMessage}
+                  completedTasks={completedTasks} />
+        <TaskPage completedTasks={completedTasks}
+         incompleteTasks={incompleteTasks}
+          message={message}
+          imageSrc={imageSrc}
+          setImageSrc={setImageSrc}
+           />
       </Swiper>
     </Container>
   );

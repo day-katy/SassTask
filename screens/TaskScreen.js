@@ -5,11 +5,10 @@ import TaskList from '../components/TaskList';
 import Title from '../components/Title';
 import styles from '../Styles/stylesheet';
 
-const TaskScreen = () => {
+const TaskScreen = ({setCompletedTasks, setIncompleteTasks, completedTasks, incompleteTasks, message, setMessage}) => {
 
   const [taskItems, setTaskItems] = useState([])
   const [task, setTask] = useState();
-  const [message, setMessage] = useState("");
 
   return (
     <ScrollView testID='container' style={styles.container}>
@@ -20,7 +19,12 @@ const TaskScreen = () => {
         taskItems={taskItems}
         message={message}
         setMessage={setMessage}
-        setTaskItems={setTaskItems}/>
+        setTaskItems={setTaskItems}
+        completedTasks={completedTasks}
+        incompleteTasks={incompleteTasks}
+        setCompletedTasks={setCompletedTasks}
+        setIncompleteTasks={setIncompleteTasks}
+        />
 
       <KeyboardAvoidingView style={styles.addTaskSection}>
 
