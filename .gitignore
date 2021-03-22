@@ -10,5 +10,8 @@ npm-debug.*
 web-build/
 coverage/*
 
+# Firebase
+env.local
+
 # macOS
 .DS_Store

@@ -5,25 +5,30 @@ import {Container,Content} from 'native-base';
 import Swiper from 'react-native-swiper';
 import Monster from './screens/Monster';
 import TaskPage from './screens/TaskPage';
+import Signup from './components/Signup';
+import { AuthProvider } from './context/AuthContext';
 
 export default function App() {
   const [completedTasks, setCompletedTasks] = useState([]);
   const [incompleteTasks, setIncompletedTasks] = useState([]);
 
   return (
-    <Container style={styles.EntireApp}>
-      <Swiper
-      loop ={false}
-      showsPagination={false}
-      index={1}>
-        <Monster />
-        <TaskList setCompletedTasks={setCompletedTasks} 
-                  setIncompletedTasks={setIncompletedTasks} 
-                  completedTasks={completedTasks} 
-                  incompleteTasks={incompleteTasks} />
-        <TaskPage completedTasks={completedTasks} incompleteTasks={incompleteTasks} />
-      </Swiper> 
-    </Container>
+    <AuthProvider>
+      <Container style={styles.EntireApp}>
+        <Swiper
+        loop ={false}
+        showsPagination={false}
+        index={1}>
+          <Monster />
+          <TaskList setCompletedTasks={setCompletedTasks} 
+                    setIncompletedTasks={setIncompletedTasks} 
+                    completedTasks={completedTasks} 
+                    incompleteTasks={incompleteTasks} />
+          <TaskPage completedTasks={completedTasks} incompleteTasks={incompleteTasks} />
+          <Signup />
+        </Swiper> 
+      </Container>
+    </AuthProvider>
   );
 }
 
