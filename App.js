@@ -1,10 +1,11 @@
 import React from 'react';
 import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import TaskList from './screens/TaskList';
+import TaskScreen from './screens/TaskScreen';
 import {Container,Content} from 'native-base';
 import Swiper from 'react-native-swiper';
 import Monster from './screens/Monster';
 import TaskPage from './screens/TaskPage';
+import styles from './Styles/stylesheet';
 
 export default function App() {
   return (
@@ -14,16 +15,9 @@ export default function App() {
       showsPagination={false}
       index={1}>
         <Monster/>
-        <TaskList/>
+        <TaskScreen/>
         <TaskPage/>
-      </Swiper> 
+      </Swiper>
     </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  EntireApp:{
-    flex: 1,
-    backgroundColor: 'lightsalmon'
-  }
-});

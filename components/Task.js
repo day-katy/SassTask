@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native';
+import styles from '../Styles/stylesheet'
 
 const Task = (props) => {
   return (
@@ -12,31 +13,5 @@ const Task = (props) => {
   )
 }
 
-const styles = StyleSheet.create({
-
-  item: {
-    backgroundColor: '#FFF',
-    padding: 15,
-    borderRadius: 10,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginBottom: 20,
-    width: "80%",
-  },
-  itemLeft: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    flexWrap: 'wrap',
-  },
-  icon: {
-    width: 40,
-    height: 40,
-  },
-  itemText: {
-    maxWidth: '80%',
-  },
-
-});
 
 export default Task;
