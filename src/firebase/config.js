@@ -5,6 +5,7 @@ import '@firebase/firestore';
 const firebaseConfig = {
   apiKey: "AIzaSyCBb95rCOQP_-RsUQruHcACvAs8Ho2z2Ak",
   authDomain: "sasstask-9407a.firebaseapp.com",
+  databaseURL: 'https://sasstask-9407a-default-rtdb.europe-west1.firebasedatabase.app',
   projectId: "sasstask-9407a",
   storageBucket: "sasstask-9407a.appspot.com",
   messagingSenderId: "989826532405",

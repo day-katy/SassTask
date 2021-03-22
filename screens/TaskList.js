@@ -2,17 +2,36 @@ import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView, Keyboard, Button } from 'react-native';
 import Task from '../components/Task';
+import { firebase } from '../src/firebase/config'
+// import DeviceInfo from 'react-native-device-info';
 
+//  const deviceId = DeviceInfo.getDeviceId();
+ const deviceId = "phoneID";
 
 const TaskList = ({setCompletedTasks, setIncompletedTasks, completedTasks, incompleteTasks}) => {
   const [taskItems, setTaskItems] = useState([])
   const [task, setTask] = useState();
   const addTask = () => {
     Keyboard.dismiss();
+    writeTaskData(task);
     setTaskItems([...taskItems, task]);
     setTask('');
     setMessage('');
   }
+
+  function writeTaskData(taskName) {
+  firebase.database().ref('todos/' + deviceId).push({
+    deviceId: deviceId,
+    taskName: taskName
+  })
+  .then((res) => {
+                        console.log(res)
+                    })
+                    .catch((error) => {
+                        alert(error)
+                           });
+                    ;
+}
 
   const [message, setMessage] = useState("");
 
