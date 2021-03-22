@@ -13,7 +13,7 @@ const TaskPage = ({completedTasks, incompleteTasks, message}) => {
     <View style={styles.monster}>
       <Text style={styles.title}>Completed tasks: {completedTasks.length}</Text>
       <Text style={styles.title}>{message}</Text>
-      <Monster completedTasks={completedTasks} />
+      <Monster imageSrc={imageSrc} />
 
     </View>
   )

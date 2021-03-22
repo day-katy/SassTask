@@ -10,14 +10,25 @@ export default function App() {
   const [completedTasks, setCompletedTasks] = useState([]);
   const [incompleteTasks, setIncompletedTasks] = useState([]);
   const [message, setMessage] = useState("");
-  const [imageSrc, setImageSrc] = useState(require('../assets/Sassagotchi-egg-coloured.gif'));
+  const [imageSrc, setImageSrc] = useState(require('./assets/Sassagotchi-egg-coloured.gif'));
+
+  const monsterPicker = () => {
+    if(completedTasks.length >= 3) {
+      setImageSrc('./assets/SnapSquash.gif')
+    } else if(completedTasks >= 1) {
+      setImageSrc('./assets/SasSquash.gif')
+    } else {
+      setImageSrc('./assets/Sassagotchi-egg-coloured.gif')
+    }
+  }
 
   return (
     <Container style={styles.EntireApp}>
       <Swiper
       loop ={false}
       showsPagination={false}
-      index={1}>
+      index={1}
+      onIndexChanged={monsterPicker()}>
         <Monster />
         <TaskList setCompletedTasks={setCompletedTasks}
                   setIncompletedTasks={setIncompletedTasks}
@@ -28,6 +39,7 @@ export default function App() {
         <TaskPage completedTasks={completedTasks}
          incompleteTasks={incompleteTasks}
           message={message}
+          imageSrc={imageSrc}
            />
       </Swiper>
     </Container>
