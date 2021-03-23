@@ -5,7 +5,13 @@
 # ----------------------------------------------------------------
 
 
-This is our final project for Makers Academy. This is a mobile app.
+<img src='./assets/Sassagotchi-egg-coloured.gif' height='300'> <img src='./assets/SasSquash.gif' height='300'> <img src='./assets/SnapSquash.gif' height='300'>
+
+This is our final project for Makers Academy. 
+
+
+The goal of this mobile app is to create a todo list and habit manager whereby you can track daily tasks/chores. Your success in completing/failing these tasks will have a direct effect for the monster which you care for, similar to a tamagotchi. Completing tasks will feed the monster, while failing to complete tasks will have a negative effect on your monster. 
+
 
 ## To Run This App
 
@@ -45,6 +51,9 @@ expo start
 - Install the ExpoGo app on your iphone.
 - scan the barcode with your phone camera.
 
+## Technology:
+
+This app is built with React native. The database is built using Firebase. 
 
 ## Wireframe
 Here is the initial wireframe design of our app:
