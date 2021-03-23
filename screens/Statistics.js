@@ -3,6 +3,18 @@ import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, Text
 import styles from '../Styles/stylesheet';
 
 const Monster = (props) => {
+  const [monsterMessage, setMonsterMessage] = useState();
+
+  const monsterSays = () => {
+    if(props.completedTasks.length > props.incompleteTasks.length) {
+      setMonsterMessage('Keep up the good work')
+    } else if (props.completedTasks.length < props.incompleteTasks.length){
+      setMonsterMessage('Awful effort. Your monster is suffering...')
+    } else {
+      setMonsterMessage('You could do better')
+    }
+  }
+
   return (
     <View style={styles.monster}>
       <Text style={styles.title}>SassTask</Text>
@@ -14,7 +26,10 @@ const Monster = (props) => {
            {props.rating}</Text>
       </View>
       <View style={styles.mascotSection}>
-        <Image source={require('../assets/Sassagotchi-1-coloured.gif')} style={styles.mascot}/>
+        <Text style={styles.mascotStatement}>{monsterMessage}</Text>
+        <TouchableOpacity onPress={() => monsterSays()}>
+          <Image source={require('../assets/Sassagotchi-1-coloured.gif')} style={styles.mascot}/>
+        </TouchableOpacity>
       </View>
     </View>
   )

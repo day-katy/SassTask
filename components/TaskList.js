@@ -19,7 +19,7 @@ const TaskList = (props) => {
   }
 
   const noButton = (item) => {
-    props.setMessage("You sicken me");
+    props.setMessage("Disappointing");
     props.setIncompleteTasks([...props.incompleteTasks, item]);
     props.setRating(props.rating -= 1)
     completeTask();

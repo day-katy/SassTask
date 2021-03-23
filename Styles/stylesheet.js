@@ -130,5 +130,10 @@ export default StyleSheet.create({
   },
   mascotSection: {
     paddingTop: 100
+  },
+  mascotStatement: {
+    alignSelf: 'center',
+    fontSize: 25,
+    
   }
 })
