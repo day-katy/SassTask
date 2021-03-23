@@ -3,7 +3,7 @@ import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, Text
 import TaskScreen from './screens/TaskScreen';
 import {Container,Content} from 'native-base';
 import Swiper from 'react-native-swiper';
-import Monster from './screens/Monster';
+import Stats from './screens/Statistics';
 import TaskPage from './screens/TaskPage';
 import styles from './Styles/stylesheet';
 
@@ -21,7 +21,7 @@ export default function App() {
       loop ={false}
       showsPagination={false}
       index={1}>
-        <Monster
+        <Stats
         completedTasks={completedTasks}
         incompleteTasks={incompleteTasks}
         rating={rating}
