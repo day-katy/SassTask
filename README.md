@@ -51,15 +51,19 @@ Here is the initial wireframe design of our app:
 https://wireframe.cc/pro/pp/21df94671423933
 
 Homepage:
+
 <img src="./assets/Homepage.png" height='500'>
 
 Todo List:
-<img src=".assets/Todo-list.png" height='500'>
+
+<img src="./assets/Todo-list.png" height='500'>
 
 SasSquash page:
+
 <img src='./assets/Sassagotchi-page.png' height='500'>
 
 Task page:
+
 <img src='./assets/Task-page.png' height='500'>
 
 ### MVP User Stories
