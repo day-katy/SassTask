@@ -10,14 +10,33 @@ const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRating }) =
   const [monsterStyle, setMonsterStyle] = useState(styles.monsterSmall)
 
   const monsterPicker = () => {
-    if(rating >= 3) {
+    if(rating >7) {
         setMonsterStyle(styles.monsterLarge)
-        // setImageSrc(require('../assets/SnapSquash.gif'))
-    } else if(rating > 0) {
+        setImageSrc(require('../assets/SnapSquash.gif'))
+    } else if(rating >6) {
         setMonsterStyle(styles.monsterMedium)
-        // setImageSrc(require('../assets/SasSquash.gif'))
+        setImageSrc(require('../assets/SnapSquash.gif'))
+    } else if(rating >5){
+       setMonsterStyle(styles.monsterSmall)
+       setImageSrc(require('../assets/SnapSquash.gif'))
+    } else if(rating >4) {
+      setMonsterStyle(styles.monsterLarge)
+      setImageSrc(require('../assets/SasSquash.gif'))
+    } else if(rating >3) {
+      setMonsterStyle(styles.monsterMedium)
+      setImageSrc(require('../assets/SasSquash.gif'))
+    } else if(rating >2) {
+      setMonsterStyle(styles.monsterSmall)
+      setImageSrc(require('../assets/SasSquash.gif'))
+    } else if (rating > 1) {
+      setMonsterStyle(styles.monsterLarge)
+      setImageSrc(require('../assets/Sassagotchi-final-egg.gif'))
+    } else if (rating > 0) {
+      setMonsterStyle(styles.monsterMedium)
+      setImageSrc(require('../assets/Sassagotchi-egg-coloured.gif'))
     } else {
-      return setImageSrc(require('../assets/Sassagotchi-egg-coloured.gif'))
+      setMonsterStyle(styles.monsterSmall)
+      setImageSrc(require('../assets/Sassagotchi-egg-coloured.gif'))
     }
   }
 
