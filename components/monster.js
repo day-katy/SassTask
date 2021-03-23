@@ -11,12 +11,11 @@ const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRating }) =
 
   const monsterPicker = () => {
     if(rating >= 3) {
-      return setImageSrc(require('../assets/SnapSquash.gif'))
+        setMonsterStyle(styles.monsterLarge)
+        // setImageSrc(require('../assets/SnapSquash.gif'))
     } else if(rating > 0) {
-      return (
         setMonsterStyle(styles.monsterMedium)
-        setImageSrc(require('../assets/SasSquash.gif'))
-      )
+        // setImageSrc(require('../assets/SasSquash.gif'))
     } else {
       return setImageSrc(require('../assets/Sassagotchi-egg-coloured.gif'))
     }

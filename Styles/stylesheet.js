@@ -79,6 +79,11 @@ export default StyleSheet.create({
    height: 200,
    width: 200
  },
+ monsterLarge: {
+  resizeMode: 'contain',
+  height: 400,
+  width: 400
+},
  title: {
    fontSize: 40,
    fontWeight: 'bold',
