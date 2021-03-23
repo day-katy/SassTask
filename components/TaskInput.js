@@ -1,9 +1,12 @@
 import React from 'react'
 import { StyleSheet, View, TextInput, Keyboard, TouchableOpacity, Text, KeyboardAvoidingView } from 'react-native';
 import styles from '../Styles/stylesheet';
+import * as Device from 'expo-device';
 
 const TaskInput = (props) => {
   const addTask = () => {
+    console.log(Device.modelId)
+    console.log(Device.designName)
     Keyboard.dismiss();
     props.setTaskItems([...props.taskItems, props.task]);
     props.setTask('');

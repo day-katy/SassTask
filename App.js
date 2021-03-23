@@ -6,6 +6,7 @@ import Swiper from 'react-native-swiper';
 import Monster from './screens/Monster';
 import TaskPage from './screens/TaskPage';
 import styles from './Styles/stylesheet';
+import * as Device from 'expo-device';
 
 export default function App() {
   const [completedTasks, setCompletedTasks] = useState([]);
@@ -16,6 +17,7 @@ export default function App() {
 
   return (
     
+
     <Container testID= "entireAppWrapper" style={styles.EntireApp}>
       <Swiper
       loop ={false}
