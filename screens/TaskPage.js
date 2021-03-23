@@ -3,11 +3,6 @@ import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, Text
 
 const TaskPage = ({completedTasks, incompleteTasks}) => {
 
-  // const interpretTasks = () => {
-    console.log(completedTasks);
-    console.log(incompleteTasks);
-  // }
-
   return (
     <View style={styles.monster}>
       <Text style={styles.title}>Feedback Here!</Text>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView, Keyboard, Button } from 'react-native';
 import Task from '../components/Task';
@@ -6,31 +6,32 @@ import { firebase } from '../src/firebase/config'
 // import DeviceInfo from 'react-native-device-info';
 
 //  const deviceId = DeviceInfo.getDeviceId();
- const deviceId = "phoneID";
+ const deviceId = "phoneID_2";
 
 const TaskList = ({setCompletedTasks, setIncompletedTasks, completedTasks, incompleteTasks}) => {
   const [taskItems, setTaskItems] = useState([])
   const [task, setTask] = useState();
+  const [changeCount, setChangeCount] = useState(0)
   const addTask = () => {
     Keyboard.dismiss();
     writeTaskData(task);
-    setTaskItems([...taskItems, task]);
+    let newCount = changeCount + 1
+    setChangeCount(newCount)
+    // setTaskItems([...taskItems, task]);
     setTask('');
     setMessage('');
   }
 
   function writeTaskData(taskName) {
-  firebase.database().ref('todos/' + deviceId).push({
-    deviceId: deviceId,
-    taskName: taskName
+    firebase.database().ref('todos/' + deviceId).push({
+      taskId: `${deviceId}${firebase.database.ServerValue.TIMESTAMP.valueOf()}`,
+      taskName: taskName,
+      taskStatus: ' ',
+      time: firebase.database.ServerValue.TIMESTAMP
   })
-  .then((res) => {
-                        console.log(res)
-                    })
-                    .catch((error) => {
-                        alert(error)
-                           });
-                    ;
+  .catch((error) => {
+      alert(error)
+          });
 }
 
   const [message, setMessage] = useState("");
@@ -41,21 +42,60 @@ const TaskList = ({setCompletedTasks, setIncompletedTasks, completedTasks, incom
     // let tmp = completedTasks;
     // console.log(tmp);
     // tmp.push(item);
-    // setCompletedTasks(completedTasks.concat([item]));
+    // setCompletedTasks(completedTasks.concat([item]))
+
+    var ref = firebase.database().ref('todos/' + deviceId);
+
+    ref.orderByChild("time").equalTo(item[0]).on("child_added", function(snapshot) {
+      ref.child(snapshot.key).update({'taskStatus': 'Y'})
+    });
+    let newCount = changeCount + 1
+    setChangeCount(newCount)
     setCompletedTasks([...completedTasks, item]);
     completeTask();
-    // callBack();
   }
+
   const noButton = (item) => {
     setMessage("You sicken me");
+
+    var ref = firebase.database().ref('todos/' + deviceId);
+
+    ref.orderByChild("time").equalTo(item[0]).on("child_added", function(snapshot) {
+      ref.child(snapshot.key).update({'taskStatus': 'N'})
+    });
+    let newCount = changeCount + 1
+    setChangeCount(newCount)
     setIncompletedTasks([...incompleteTasks, item]);
     completeTask();
   }
   const completeTask = (index) => {
     let itemsCopy = [...taskItems];
     itemsCopy.splice(index, 1);
-    setTaskItems(itemsCopy);
+    // setTaskItems(itemsCopy);
   }
+
+  function loadTasksFromDB() {
+    const todosFromDB = [];
+    var userTodos = firebase.database().ref('todos/' + deviceId);
+    if (userTodos) {
+      userTodos.on('value', (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          for (const [key, value] of Object.entries(data)) {
+            if ( value.taskStatus !== 'Y' ) {
+              todosFromDB.push([value.time, value.taskName]);
+            }
+          }
+        }
+        setTaskItems([...todosFromDB]);
+      });
+    }
+  }
+
+  useEffect(() => {
+    loadTasksFromDB();
+  }, [changeCount])
+
   return (
     <View style={styles.container}>
       <View>
@@ -67,7 +107,7 @@ const TaskList = ({setCompletedTasks, setIncompletedTasks, completedTasks, incom
           taskItems.map((item, index) => {
             return (
                 <View key={index} style={styles.tasks}>
-                 <Task text={item} />
+                 <Task text={item[1]} />
                  <View style={styles.taskButtons}>
                   <View style={styles.yesButton}>
                     <Button title='Y' onPress={() => yesButton(item)}></Button>
