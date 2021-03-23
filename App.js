@@ -15,14 +15,18 @@ export default function App() {
   const [rating, setRating] = useState(0)
 
   return (
-    
+
     <Container testID= "entireAppWrapper" style={styles.EntireApp}>
       <Swiper
       loop ={false}
       showsPagination={false}
       index={1}>
-        <Monster />
-        <TaskScreen 
+        <Monster
+        completedTasks={completedTasks}
+        incompleteTasks={incompleteTasks}
+        rating={rating}
+        />
+        <TaskScreen
           setCompletedTasks={setCompletedTasks}
           setIncompleteTasks={setIncompleteTasks}
           completedTasks={completedTasks}
@@ -32,7 +36,7 @@ export default function App() {
           completedTasks={completedTasks}
           rating={rating}
           setRating={setRating} />
-        <TaskPage 
+        <TaskPage
           completedTasks={completedTasks}
           incompleteTasks={incompleteTasks}
           message={message}

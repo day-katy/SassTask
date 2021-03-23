@@ -110,5 +110,25 @@ export default StyleSheet.create({
     alignItems: 'center',
     height: "100%",
     width: "100%",
+  },
+  stats: {
+    backgroundColor: 'white',
+    borderRadius: 60,
+    marginTop: 50,
+    padding: 30
+  },
+  statistics: {
+    fontSize: 20,
+    padding: 5,
+    margin: 5,
+    fontWeight: 'bold'
+  },
+  mascot: {
+    alignSelf: 'center',
+    width: 200,
+    height: 200
+  },
+  mascotSection: {
+    paddingTop: 100
   }
 })
