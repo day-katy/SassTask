@@ -13,7 +13,7 @@ Clone this repo by running:
 ```
 git clone git@github.com:day-katy/SassTask.git
 ```
-Change into the Sastask directory:
+Change into the Sasstask directory:
 ```
 cd SassTask
 ```
@@ -49,6 +49,18 @@ expo start
 ## Wireframe
 Here is the initial wireframe design of our app:
 https://wireframe.cc/pro/pp/21df94671423933
+
+Homepage:
+<img src="./assets/Homepage.png" height='500'>
+
+Todo List:
+<img src=".assets/Todo-list.png" height='500'>
+
+SasSquash page:
+<img src='./assets/Sassagotchi-page.png' height='500'>
+
+Task page:
+<img src='./assets/Task-page.png' height='500'>
 
 ### MVP User Stories
 
@@ -186,7 +198,15 @@ Here is a list of the currently implemented features on SassTask:
 * Your monster will provide feedback when you do not complete tasks
 
 ## Features to be implemented
-* You can update tasks
+* Your monster will die if you do not complete enough tasks
+
+* Your monster will ascend if you complete enough tasks
+
+* You can get a new monster when your monster dies/moves on
+
+* You can keep track of completed/failed tasks
+
+* You can see stats of how well you are doing
 
 ## Planning
 Here is a link to our trello board:  
