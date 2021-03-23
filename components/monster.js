@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import egg from '../assets/Sassagotchi-egg-coloured.gif';
 import teen from '../assets/SasSquash.gif';
 import Sassquash from '../assets/SnapSquash.gif';

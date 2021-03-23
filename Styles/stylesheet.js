@@ -64,11 +64,6 @@ export default StyleSheet.create({
  itemText: {
    maxWidth: '80%',
  },
- monsterSection:{
-   flex: 1,
-   justifyContent: 'center',
-   alignItems: 'center',
- },
  monsterSmall:{
    resizeMode: 'contain',
    height: 100,
@@ -90,4 +85,30 @@ export default StyleSheet.create({
    paddingTop: 50,
    textAlign: 'center'
  },
+ monsterPage:{
+   flex: 1,
+   marginBottom: 60
+ },
+ completedTaskCounter: {
+   fontSize: 30,
+   paddingTop: 100,
+   fontStyle: 'normal',
+   fontWeight: 'bold'
+ },
+ monsterComment: {
+   color: 'darkgreen',
+   fontSize: 30,
+   fontWeight: 'bold',
+   alignSelf: 'center',
+   paddingTop: 200,
+ },
+ monsterSection: {
+  flex: 1,
+},
+  monsterBackground: {
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    height: "100%",
+    width: "100%",
+  }
 })
