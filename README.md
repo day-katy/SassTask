@@ -25,12 +25,12 @@ Run expo start to begin the app simulation
 ```
 expo start
 ```
-You may then run the app either with a local android/iphone simulator, within your web browser or with your own code following the instructions below: 
+You may then run the app either with a local android/iphone simulator, within your web browser or with your own code following the instructions below:
 
 #### Android user:
 To use this app on Android:
-- Run expo start in your terminal 
-``` 
+- Run expo start in your terminal
+```
 expo start
 ```
 - Install the ExpoGo app on your android.
@@ -38,7 +38,7 @@ expo start
 
 #### Iphone user:
 To use this app on Iphone:
-- Run expo start in your terminal 
+- Run expo start in your terminal
 ```
 expo start
 ```
@@ -154,15 +154,15 @@ Currently all tests are passing with 100% Coverage.
 
 ## Tests to Implement
 
-* You can add a task 
-* You can add more than one task and see them all 
-* You can complete a task 
-* Completing a task will remove it from the page 
+* You can add a task
+* You can add more than one task and see them all
+* You can complete a task
+* Completing a task will remove it from the page
 * You can mark a task as incomplete
-* You can delete a task 
-* Your monster will provide feedback when you complete a task 
-* Your monster will provide feedback if you do not complete a task 
-* You can update a task 
+* You can delete a task
+* Your monster will provide feedback when you complete a task
+* Your monster will provide feedback if you do not complete a task
+* You can update a task
 
 ## Features Implemented
 Here is a list of the currently implemented features on SassTask:
@@ -174,7 +174,7 @@ Here is a list of the currently implemented features on SassTask:
 <img src="assets/TaskList.png" height='500'>
 
 * You can complete tasks
-<img src="assets/CompletreTask.png" height='500'>
+<img src="assets/CompleteTask.png" height='500'>
 
 * You can mark tasks as incomplete
 <img src="assets/IncompleteTask.png" height='500'>
@@ -186,7 +186,7 @@ Here is a list of the currently implemented features on SassTask:
 * Your monster will provide feedback when you do not complete tasks
 
 ## Features to be implemented
-* You can update tasks 
+* You can update tasks
 
 ## Planning
 Here is a link to our trello board:  
