@@ -5,6 +5,7 @@ export default StyleSheet.create({
   EntireApp:{
     flex: 1,
     backgroundColor: 'lightsalmon'
+    
   },
   container: {
     flex: 1,
@@ -88,6 +89,10 @@ export default StyleSheet.create({
    fontSize: 40,
    fontWeight: 'bold',
    paddingTop: 50,
-   textAlign: 'center'
+   textAlign: 'center',
+   fontFamily: 'Courier',
+   color: 'white',
+  
+  
  },
 })
