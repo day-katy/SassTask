@@ -5,7 +5,7 @@ import TaskList from '../components/TaskList';
 import Title from '../components/Title';
 import styles from '../Styles/stylesheet';
 
-const TaskScreen = ({setCompletedTasks, setIncompleteTasks, completedTasks, incompleteTasks, message, setMessage}) => {
+const TaskScreen = ({setCompletedTasks, setIncompleteTasks, completedTasks, incompleteTasks, message, setMessage, rating, setRating}) => {
 
   const [taskItems, setTaskItems] = useState([])
   const [task, setTask] = useState();
@@ -24,7 +24,8 @@ const TaskScreen = ({setCompletedTasks, setIncompleteTasks, completedTasks, inco
         incompleteTasks={incompleteTasks}
         setCompletedTasks={setCompletedTasks}
         setIncompleteTasks={setIncompleteTasks}
-        />
+        rating={rating}
+        setRating={setRating}/>
 
       <KeyboardAvoidingView style={styles.addTaskSection}>
 

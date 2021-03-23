@@ -3,13 +3,16 @@ import { Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import egg from '../assets/Sassagotchi-egg-coloured.gif';
 import teen from '../assets/SasSquash.gif';
 import Sassquash from '../assets/SnapSquash.gif';
+import styles from '../Styles/stylesheet';
 
-const monster = ({ imageSrc, setImageSrc, completedTasks }) => {
+const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRating }) => {
+
+  const [monsterStyle, setMonsterStyle] = useState(styles.monsterSmall)
 
   const monsterPicker = () => {
-    if(completedTasks.length >= 3) {
+    if(rating >= 3) {
       return setImageSrc(require('../assets/SnapSquash.gif'))
-    } else if(completedTasks.length > 0) {
+    } else if(rating > 0) {
       return setImageSrc(require('../assets/SasSquash.gif'))
     } else {
       return setImageSrc(require('../assets/Sassagotchi-egg-coloured.gif'))
@@ -17,7 +20,7 @@ const monster = ({ imageSrc, setImageSrc, completedTasks }) => {
   }
 
   return (
-    <TouchableOpacity onPress={() => monsterPicker()}>
+    <TouchableOpacity style={monsterStyle} onPress={() => monsterPicker()}>
       <Image source={imageSrc}/>
     </TouchableOpacity>
   )

@@ -8,17 +8,20 @@ const TaskList = (props) => {
     let itemsCopy = [...props.taskItems];
     itemsCopy.splice(index, 1);
     props.setTaskItems(itemsCopy);
+    console.log(props.rating)
   }
 
   const yesButton = (item) => {
     props.setMessage("You go gurrl");
     props.setCompletedTasks([...props.completedTasks, item]);
+    props.setRating(props.rating += 1)
     completeTask();
   }
 
   const noButton = (item) => {
     props.setMessage("You sicken me");
     props.setIncompleteTasks([...props.incompleteTasks, item]);
+    props.setRating(props.rating -= 1)
     completeTask();
   }
 
