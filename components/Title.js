@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import styles from '../Styles/stylesheet';
 
 const Title = () => {
   return (
@@ -10,14 +11,5 @@ const Title = () => {
   </View>
   );
 }
-
-const styles = StyleSheet.create({
-  title: {
-    fontSize: 40,
-    fontWeight: 'bold',
-    paddingTop: 50,
-    textAlign: 'center'
-  },
-})
 
 export default Title;

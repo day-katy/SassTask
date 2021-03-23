@@ -64,9 +64,30 @@ export default StyleSheet.create({
  itemText: {
    maxWidth: '80%',
  },
- monster:{
+ monsterSection:{
    flex: 1,
    justifyContent: 'center',
    alignItems: 'center',
- }
+ },
+ monsterSmall:{
+   resizeMode: 'contain',
+   height: 100,
+   width: 100
+ },
+ monsterMedium: {
+   resizeMode: 'contain',
+   height: 200,
+   width: 200
+ },
+ monsterLarge: {
+  resizeMode: 'contain',
+  height: 400,
+  width: 400
+},
+ title: {
+   fontSize: 40,
+   fontWeight: 'bold',
+   paddingTop: 50,
+   textAlign: 'center'
+ },
 })
