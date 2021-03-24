@@ -180,27 +180,31 @@ Currently all tests are passing with 100% Coverage.
 Here is a list of the currently implemented features on SassTask:
 
 * You can add tasks
-<img src="assets/Main_screen.png" height='500'>
+<img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text>< img src="assets/Task_added.png" height='500'>
 
 * You can see a list of tasks
-<img src="assets/TaskList.png" height='500'>
+<img src="assets/Task_added.png" height='500'> <text> ---> </text>< img src="assets/TaskList.png" height='500'>
 
 * You can complete tasks
-<img src="assets/CompleteTask.png" height='500'>
+<img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/Complete_task.png" height='500'>
 
 * You can mark tasks as incomplete
-<img src="assets/IncompleteTask.png" height='500'>
+<img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/failed_task.png" height='500'>
 
 * You can delete tasks
+<img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/deleted_task.png" height='500'>
 
 * Your monster will provide feedback when you complete tasks
+<img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/Complete_task.png" height='500'>
 
 * Your monster will provide feedback when you do not complete tasks
+<img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/failed_task.png" height='500'>
 
-## Features to be implemented
 * Your monster will die if you do not complete enough tasks
 
 * Your monster will ascend if you complete enough tasks
+
+## Features to be implemented
 
 * You can get a new monster when your monster dies/moves on
 
