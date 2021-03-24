@@ -6,6 +6,14 @@ import Swiper from 'react-native-swiper';
 import Monster from './screens/Monster';
 import TaskPage from './screens/TaskPage';
 import styles from './Styles/stylesheet';
+import returnDeviceId from './katy-id'
+
+ async function thingy(){
+  const deviceId =  await returnDeviceId()
+  console.log(deviceId)
+}
+
+thingy()
 
 export default function App() {
   const [completedTasks, setCompletedTasks] = useState([]);
