@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View, Button} from 'react-native';
 import egg from '../assets/Sassagotchi-egg-coloured.gif';
 import teen from '../assets/SasSquash.gif';
 import Sassquash from '../assets/SnapSquash.gif';
@@ -43,16 +43,31 @@ const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRating, set
       }
        else if (rating < -2) {
         setMonsterStyle(styles.monsterSmall)
-        setMessage("You killed me!")
+        setMessage("You killed me! Click reset to try again")
         setImageSrc(require('../assets/Sassagotchi-ghost.gif'))
       }
-    
+
+  }
+
+  const resetButton = () => {
+    if(rating > -2) {
+      setMessage('You must live with your choices')
+    } else {
+      setRating(0)
+      setMessage("You have been given another chance... don't mess it up")
+      setImageSrc(require('../assets/Sassagotchi-egg-coloured.gif'))
+    }
   }
 
   return (
-    <TouchableOpacity onPress={() => monsterPicker()}>
-      <Image source={imageSrc} style={monsterStyle}/>
-    </TouchableOpacity>
+    <View>
+      <TouchableOpacity onPress={() => monsterPicker()}>
+        <Image source={imageSrc} style={monsterStyle}/>
+      </TouchableOpacity>
+      <View>
+        <Button title='Reset Monster' onPress={() => resetButton()}/>
+      </View>
+    </View>
   )
 }
 
