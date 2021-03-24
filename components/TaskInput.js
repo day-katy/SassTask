@@ -2,10 +2,18 @@ import React from 'react'
 import { StyleSheet, View, TextInput, Keyboard, TouchableOpacity, Text, KeyboardAvoidingView } from 'react-native';
 import styles from '../Styles/stylesheet';
 
+import { writeData } from '../src/firebase/utils';
+
 const TaskInput = (props) => {
   const addTask = () => {
     Keyboard.dismiss();
-    props.setTaskItems([...props.taskItems, props.task]);
+    // props.setTaskItems([...props.taskItems, props.task]);
+
+    const dbInfo = {taskName: props.task, taskStatus: ' '};
+    writeData(dbInfo);
+    let newCount = props.changeCount + 1;
+    props.setChangeCount(newCount);
+
     props.setTask('');
     props.setMessage('');
   }
