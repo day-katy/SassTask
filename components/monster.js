@@ -10,7 +10,11 @@ const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRating, set
   const [monsterStyle, setMonsterStyle] = useState(styles.monsterSmall)
 
   const monsterPicker = () => {
-      if(rating >7) {
+    if (rating > 10){
+      setMonsterStyle(styles.monsterLarge)
+      setImageSrc(require('../assets/Ascended-Snapsquash.gif'))
+      setMessage('Your efforts have allowed me to ascend. I can go no further. Click reset to try again with a new Sasscot...')
+    } else if(rating >7) {
           setMonsterStyle(styles.monsterLarge)
           setImageSrc(require('../assets/SnapSquash.gif'))
       } else if(rating >6) {
@@ -50,11 +54,17 @@ const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRating, set
   }
 
   const resetButton = () => {
-    if(rating > -2) {
+    if(rating > 10) {
+      setRating(0)
+      setMessage("Congratulations. Here is a new monster for you to try with...")
+      setMonsterStyle(styles.monsterSmall)
+      setImageSrc(require('../assets/Sassagotchi-egg-coloured.gif'))
+    } else if(rating > -2) {
       setMessage('You must live with your choices')
     } else {
       setRating(0)
       setMessage("You have been given another chance... don't mess it up")
+      setMonsterStyle(styles.monsterSmall)
       setImageSrc(require('../assets/Sassagotchi-egg-coloured.gif'))
     }
   }
