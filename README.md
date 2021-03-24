@@ -65,7 +65,7 @@ Homepage:
 
 Todo List:
 
-<img src=".assets/Todo-list.png" height='500'>
+<img src="./assets/Todo-list.png" height='500'>
 
 SasSquash page:
 
@@ -194,11 +194,11 @@ Here is a list of the currently implemented features on SassTask:
 
 * You can add tasks:
 
-<img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text><img src="assets/Task_added.png" height='500'>
+<img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/Task_added.png" height='500'>
 
 * You can see a list of tasks:
 
-<img src="assets/Task_added.png" height='500'> <text> ---> </text>< img src="assets/TaskList.png" height='500'>
+<img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/TaskList.png" height='500'>
 
 * You can complete tasks: 
 
