@@ -5,9 +5,7 @@ import TaskList from '../components/TaskList';
 import Title from '../components/Title';
 import styles from '../Styles/stylesheet';
 
-const TaskScreen = ({setCompletedTasks, setIncompleteTasks, completedTasks, incompleteTasks, message, setMessage, rating, setRating}) => {
-
-  const [taskItems, setTaskItems] = useState([])
+const TaskScreen = ({taskItems, setTaskItems, setCompletedTasks, setIncompleteTasks, completedTasks, incompleteTasks, message, setMessage, rating, setRating, changeCount, setChangeCount}) => {
   const [task, setTask] = useState();
 
   return (
@@ -25,7 +23,9 @@ const TaskScreen = ({setCompletedTasks, setIncompleteTasks, completedTasks, inco
         setCompletedTasks={setCompletedTasks}
         setIncompleteTasks={setIncompleteTasks}
         rating={rating}
-        setRating={setRating}/>
+        setRating={setRating}
+        changeCount={changeCount}
+        setChangeCount={setChangeCount} />
 
       <KeyboardAvoidingView style={styles.addTaskSection}>
 
@@ -35,7 +35,9 @@ const TaskScreen = ({setCompletedTasks, setIncompleteTasks, completedTasks, inco
           taskItems={taskItems}
           task={task}
           setTask ={setTask}
-          setMessage={setMessage}/>
+          setMessage={setMessage}
+          changeCount={changeCount}
+          setChangeCount={setChangeCount} />
 
       </KeyboardAvoidingView>
 
