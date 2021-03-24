@@ -53,7 +53,22 @@ expo start
 
 ## Technology:
 
-This app is built with React native. The database is built using Firebase.
+Front end:
+React native, a javascript-based framework was used for our app frontend. This was because React Native allowed us to easily build an app capable of working on both Andriod and IOS.
+
+<img src='./assests/javascript-icon.png' height='200'> <img src='./assets/React-native-icon.png' height='200'>
+
+Backend:
+Firebase, a cloud-based database, was used for our backend as it granted us an easy framework to set up a databse for each user.
+
+<img src='./assets/firebase-icon.png' height='200'>
+
+Animation:
+Our animations were generated using a browser based application called 'Piskel':
+https://www.piskelapp.com/
+
+<img src='./assets/piskel-icon.png' height='200>
+
 
 ## Wireframe
 Here is the initial wireframe design of our app:
@@ -200,29 +215,29 @@ Here is a list of the currently implemented features on SassTask:
 
 <img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/TaskList.png" height='500'>
 
-* You can complete tasks: 
+* You can complete tasks:
 
 <img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/Complete_task.png" height='500'>
 
-* You can mark tasks as incomplete: 
+* You can mark tasks as incomplete:
 
 <img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/failed_task.png" height='500'>
 
-* You can delete tasks: 
+* You can delete tasks:
 
 <img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/deleted_task.png" height='500'>
 
-* Your monster will provide feedback when you complete tasks: 
+* Your monster will provide feedback when you complete tasks:
 
 <img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/Complete_task.png" height='500'>
 
-* Your monster will provide feedback when you do not complete tasks: 
+* Your monster will provide feedback when you do not complete tasks:
 
 <img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/failed_task.png" height='500'>
 
-* Your monster will die if you do not complete enough tasks: 
+* Your monster will die if you do not complete enough tasks:
 
-* Your monster will ascend if you complete enough tasks: 
+* Your monster will ascend if you complete enough tasks:
 
 ## Features to be implemented
 
