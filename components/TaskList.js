@@ -18,7 +18,7 @@ const TaskList = (props) => {
     console.log('In YESBUTTON')
     props.setMessage("You go gurrl");
     props.setCompletedTasks([...props.completedTasks, item]);
-    // props.setRating(props.rating += 1)
+    props.setRating(props.rating += 1)
     completeTask();
 
     sayHi(item[1])
