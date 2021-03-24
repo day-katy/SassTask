@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native';
 import Task from '../components/Task';
 
+import { sayHi, updateTaskStatus } from '../src/firebase/utils'
+
 const TaskList = (props) => {
 
   const completeTask = (index) => {
@@ -12,10 +14,17 @@ const TaskList = (props) => {
   }
 
   const yesButton = (item) => {
+
+    console.log('In YESBUTTON')
     props.setMessage("You go gurrl");
     props.setCompletedTasks([...props.completedTasks, item]);
-    props.setRating(props.rating += 1)
+    // props.setRating(props.rating += 1)
     completeTask();
+
+    sayHi(item[1])
+    updateTaskStatus(item);
+    let newCount = props.changeCount + 1;
+    props.setChangeCount(newCount);
   }
 
   const noButton = (item) => {
@@ -23,6 +32,10 @@ const TaskList = (props) => {
     props.setIncompleteTasks([...props.incompleteTasks, item]);
     props.setRating(props.rating -= 1)
     completeTask();
+
+    // updateTodoStatus(item);
+    // let newCount = props.changeCount + 1;
+    // props.setChangeCount(newCount);
   }
 
 
@@ -31,7 +44,7 @@ const TaskList = (props) => {
       props.taskItems.map((item, index) => {
         return (
             <TouchableOpacity key = {index} style={styles.tasks} onPress={ () => completeTask()} >
-             <Task  text={item} />
+             <Task  text={item[1]} />
              <View style={styles.taskButtons}>
               <View style={styles.yesButton}>
                 <Button title='Y' onPress={() => yesButton(item)}/>
