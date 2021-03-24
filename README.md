@@ -60,15 +60,19 @@ Here is the initial wireframe design of our app:
 https://wireframe.cc/pro/pp/21df94671423933
 
 Homepage:
+
 <img src="./assets/Homepage.png" height='500'>
 
 Todo List:
+
 <img src=".assets/Todo-list.png" height='500'>
 
 SasSquash page:
+
 <img src='./assets/Sassagotchi-page.png' height='500'>
 
 Task page:
+
 <img src='./assets/Task-page.png' height='500'>
 
 ### MVP User Stories
@@ -188,30 +192,37 @@ Currently all tests are passing with 100% Coverage.
 ## Features Implemented
 Here is a list of the currently implemented features on SassTask:
 
-* You can add tasks
-<img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text>< img src="assets/Task_added.png" height='500'>
+* You can add tasks:
 
-* You can see a list of tasks
+<img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text><img src="assets/Task_added.png" height='500'>
+
+* You can see a list of tasks:
+
 <img src="assets/Task_added.png" height='500'> <text> ---> </text>< img src="assets/TaskList.png" height='500'>
 
-* You can complete tasks
+* You can complete tasks: 
+
 <img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/Complete_task.png" height='500'>
 
-* You can mark tasks as incomplete
+* You can mark tasks as incomplete: 
+
 <img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/failed_task.png" height='500'>
 
-* You can delete tasks
+* You can delete tasks: 
+
 <img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/deleted_task.png" height='500'>
 
-* Your monster will provide feedback when you complete tasks
+* Your monster will provide feedback when you complete tasks: 
+
 <img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/Complete_task.png" height='500'>
 
-* Your monster will provide feedback when you do not complete tasks
+* Your monster will provide feedback when you do not complete tasks: 
+
 <img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/failed_task.png" height='500'>
 
-* Your monster will die if you do not complete enough tasks
+* Your monster will die if you do not complete enough tasks: 
 
-* Your monster will ascend if you complete enough tasks
+* Your monster will ascend if you complete enough tasks: 
 
 ## Features to be implemented
 
