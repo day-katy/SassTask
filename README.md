@@ -56,7 +56,7 @@ expo start
 Front end:
 React native, a javascript-based framework was used for our app frontend. This was because React Native allowed us to easily build an app capable of working on both Andriod and IOS.
 
-<img src='./assests/javascript-icon.png' height='200'> <img src='./assets/React-native-icon.png' height='200'>
+<img src='./assets/javascript-icon.png' height='200'> <img src='./assets/React-native-icon.png' height='200'>
 
 Backend:
 Firebase, a cloud-based database, was used for our backend as it granted us an easy framework to set up a databse for each user.
@@ -67,7 +67,7 @@ Animation:
 Our animations were generated using a browser based application called 'Piskel':
 https://www.piskelapp.com/
 
-<img src='./assets/piskel-icon.png' height='200>
+<img src='./assets/piskel-icon.png' height='200'>
 
 
 ## Wireframe
