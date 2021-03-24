@@ -60,6 +60,7 @@ export default function App() {
           completedTasks={completedTasks}
           incompleteTasks={incompleteTasks}
           message={message}
+          setMessage={setMessage}
           imageSrc={imageSrc}
           setImageSrc={setImageSrc}
           rating={rating}
