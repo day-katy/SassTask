@@ -1,11 +1,11 @@
-# ----------------------------------------------------------------
+# ----------------------------------------------------------
 
 <h1 align='center'> SassTask </h1>
 
-# ----------------------------------------------------------------
+# ----------------------------------------------------------
 
 
-<img src='./assets/Sassagotchi-egg-coloured.gif' height='300'> <img src='./assets/SasSquash.gif' height='300'> <img src='./assets/SnapSquash.gif' height='300'>
+<img src='./assets/SasSquash.gif' height='300'> <img src='./assets/SnapSquash.gif' height='300'>
 
 This is our final project for Makers Academy. 
 
