@@ -23,9 +23,10 @@ export default function App() {
     console.log('IN useEFFECT')
     async function fetchData() {
       let res = await loadTasksFromDB()
-      console.log(`Task length = ${taskItems.length}`)
+      console.log(`LoadFromDB length = ${res.length}`)
+      console.log(`State prior to update = ${taskItems.length}`)
       setTaskItems([...res])
-      console.log(`Task length = ${taskItems.length}`)
+      console.log(`State after update = ${taskItems.length}`)
     }
     fetchData();
     return () => {

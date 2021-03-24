@@ -19,10 +19,9 @@ const TaskList = (props) => {
     props.setMessage("You go gurrl");
     props.setCompletedTasks([...props.completedTasks, item]);
     // props.setRating(props.rating += 1)
-    completeTask();
+    // completeTask();
 
-    sayHi(item[1])
-    updateTaskStatus(item);
+    updateTaskStatus(item, 'Y');
     let newCount = props.changeCount + 1;
     props.setChangeCount(newCount);
   }
@@ -31,7 +30,11 @@ const TaskList = (props) => {
     props.setMessage("You sicken me");
     props.setIncompleteTasks([...props.incompleteTasks, item]);
     props.setRating(props.rating -= 1)
-    completeTask();
+    // completeTask();
+
+    updateTaskStatus(item, 'N');
+    let newCount = props.changeCount + 1;
+    props.setChangeCount(newCount);
 
     // updateTodoStatus(item);
     // let newCount = props.changeCount + 1;

@@ -1,6 +1,6 @@
 import { firebase } from './config'
 
-const deviceId = 'phone_001';
+const deviceId = 'phone_002';
 const dbTodoPath = 'todos/' + deviceId;
 const dbTodoRef = firebase.database().ref(dbTodoPath);
 
@@ -12,15 +12,10 @@ export function writeData(info) {
         alert(error)
             });
 }
-
-export function sayHi(name) {
-    console.log('Hi ' + name);
-}
-
-export function updateTaskStatus(item) {
+export function updateTaskStatus(item, status) {
     console.log('In UPDATE')
     dbTodoRef.orderByChild("time").equalTo(item[0]).on("child_added", function(snapshot) {
-      dbTodoRef.child(snapshot.key).update({'taskStatus': 'Y'})
+      dbTodoRef.child(snapshot.key).update({'taskStatus': status})
     });
 }
 
