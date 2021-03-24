@@ -3,13 +3,13 @@ import { Keyboard, Image, KeyboardAvoidingView, Platform, StyleSheet, Text, Text
 import Monster from '../components/Monster';
 import styles from '../Styles/stylesheet';
 
-const TaskPage = ({completedTasks, message, imageSrc, setImageSrc, rating, setRating}) => {
+const TaskPage = ({completedTasks, message, imageSrc, setImageSrc, rating, setRating, setMessage}) => {
 
   return (
     <View style={styles.monsterSection}>
       <Text >Completed tasks: {completedTasks.length}</Text>
       <Text >{message}</Text>
-      <Monster imageSrc={imageSrc} setImageSrc={setImageSrc} completedTasks={completedTasks} rating={rating} setRating={setRating}/>
+      <Monster imageSrc={imageSrc} setImageSrc={setImageSrc} completedTasks={completedTasks} rating={rating} setRating={setRating} setMessage={setMessage}/>
     </View>
   )
 };

@@ -5,7 +5,7 @@ import teen from '../assets/SasSquash.gif';
 import Sassquash from '../assets/SnapSquash.gif';
 import styles from '../Styles/stylesheet';
 
-const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRating }) => {
+const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRating, setMessage }) => {
 
   const [monsterStyle, setMonsterStyle] = useState(styles.monsterSmall)
 
@@ -37,12 +37,13 @@ const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRating }) =
       } else if (rating == 0) {
         setMonsterStyle(styles.monsterSmall)
         setImageSrc(require('../assets/Sassagotchi-egg-coloured.gif'))
-      } else if (rating < 0) {
+      } else if (rating < 0 && rating > -2) {
         setMonsterStyle(styles.monsterSmall)
-        setImageSrc(require('../assets/SnapSquash.gif'))
+        setImageSrc(require('../assets/Sassagotchi-egg-dying.gif'))
       }
        else if (rating < -2) {
         setMonsterStyle(styles.monsterSmall)
+        setMessage("You killed me!")
         setImageSrc(require('../assets/Sassagotchi-ghost.gif'))
       }
     
