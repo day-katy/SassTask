@@ -90,13 +90,12 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
 
   return (
     <View>
-    <ImageBackground source={require('../assets/green-background.jpg')} style={styles.background}>
-      <TouchableOpacity onPress={() => monsterPicker()}>
-        <Image source={imageSrc} style={monsterStyle}/>
-      </TouchableOpacity>
+      <ImageBackground source={require('../assets/green-background.jpg')} style={styles.background}>
+        <TouchableOpacity onPress={() => monsterPicker()}>
+          <Image source={imageSrc} style={monsterStyle}/>
+        </TouchableOpacity>
       </ImageBackground>
-      <View>
-
+      <View  style={styles.resetButton}>
         <Button title='Reset Monster' onPress={() => resetButton()}/>
       </View>
     </View>

@@ -66,8 +66,7 @@ export default StyleSheet.create({
  },
  monsterSection:{
    flex: 1,
-   justifyContent: 'center',
-   alignItems: 'center',
+
  },
  monsterSmall:{
    resizeMode: 'contain',
@@ -91,7 +90,22 @@ export default StyleSheet.create({
    textAlign: 'center'
  },
  background: {
-   height: 200,
-   width: 200
+   height: 400,
+   width: 400,
+   justifyContent: 'flex-end',
+    alignItems: 'center',
+ },
+ monsterPage: {
+   flex: 1,
+   marginBottom: 10,
+   justifyContent: 'center',
+   alignItems: 'center'
+ },
+ completedTaskNum: {
+   paddingTop: 200,
+ },
+ resetButton: {
+  backgroundColor: 'white',
+  borderRadius: 70,
  }
 })
