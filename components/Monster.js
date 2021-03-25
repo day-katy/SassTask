@@ -89,7 +89,7 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
   }
 
   const monsterTalk = () => {
-    const talkArray = ["Stop touching me", "What?", "Why are you bothering me?"];
+    const talkArray = ["'Stop touching me. You're' gross'", "'What?'", "'Why are you bothering me?'", "'Your fingers are huge. Get them away from me.'", "'NO NO GET AWAY!'"];
     return setMessage(talkArray[Math.floor(Math.random()*talkArray.length)]);
   }
 
