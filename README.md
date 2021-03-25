@@ -1,11 +1,17 @@
-# ----------------------------------------------------------------
+# ----------------------------------------------------------
 
 <h1 align='center'> SassTask </h1>
 
-# ----------------------------------------------------------------
+# ----------------------------------------------------------
 
 
-This is our final project for Makers Academy. This is a mobile app.
+<img src='./assets/Sassagotchi-egg-coloured.gif' height='250'><img src='./assets/SasSquash.gif' height='250'> <img src='./assets/SnapSquash.gif' height='250'>
+
+This is our final project for Makers Academy.
+
+
+The goal of this mobile app is to create a todo list and habit manager whereby you can track daily tasks/chores. Your success in completing/failing these tasks will have a direct effect for the monster which you care for, similar to a tamagotchi. Completing tasks will feed the monster, while failing to complete tasks will have a negative effect on your monster.
+
 
 ## To Run This App
 
@@ -13,7 +19,7 @@ Clone this repo by running:
 ```
 git clone git@github.com:day-katy/SassTask.git
 ```
-Change into the Sastask directory:
+Change into the Sasstask directory:
 ```
 cd SassTask
 ```
@@ -25,12 +31,12 @@ Run expo start to begin the app simulation
 ```
 expo start
 ```
-You may then run the app either with a local android/iphone simulator, within your web browser or with your own code following the instructions below: 
+You may then run the app either with a local android/iphone simulator, within your web browser or with your own code following the instructions below:
 
 #### Android user:
 To use this app on Android:
-- Run expo start in your terminal 
-``` 
+- Run expo start in your terminal
+```
 expo start
 ```
 - Install the ExpoGo app on your android.
@@ -38,17 +44,55 @@ expo start
 
 #### Iphone user:
 To use this app on Iphone:
-- Run expo start in your terminal 
+- Run expo start in your terminal
 ```
 expo start
 ```
 - Install the ExpoGo app on your iphone.
 - scan the barcode with your phone camera.
 
+## Technology:
+
+Front end:
+React native, a javascript-based framework was used for our app frontend. This was because React Native allowed us to easily build an app capable of working on both Andriod and IOS.
+
+<img src='./assets/javascript-icon.png' height='200'> <img src='./assets/React-native-icon.png' height='200'>
+
+Backend:
+Firebase, a cloud-based database, was used for our backend as it granted us an easy framework to set up a databse for each user.
+
+<img src='./assets/firebase-icon.png' height='200'>
+
+Animation:
+Our animations were generated using a browser based application called 'Piskel':
+https://www.piskelapp.com/
+
+<img src='./assets/piskel-icon.png' height='200'>
+
+Testing: 
+For testing we have used Jest. 
+
+
 
 ## Wireframe
 Here is the initial wireframe design of our app:
 https://wireframe.cc/pro/pp/21df94671423933
+
+Homepage:
+
+<img src="./assets/Homepage.png" height='500'>
+
+Todo List:
+
+<img src="./assets/Todo-list.png" height='500'>
+
+SasSquash page:
+
+<img src='./assets/Sassagotchi-page.png' height='500'>
+
+Task page:
+
+<img src='./assets/Task-page.png' height='500'>
 
 ### MVP User Stories
 
@@ -150,43 +194,62 @@ To run our tests run the following command in your terminal:
 yarn test
 ```
 <img src="assets/Test_Coverage.png">
-Currently all tests are passing with 100% Coverage.
+Currently we have one test failing and less than 100% coverage. 
 
 ## Tests to Implement
 
-* You can add a task 
-* You can add more than one task and see them all 
-* You can complete a task 
-* Completing a task will remove it from the page 
+* You can add a task
+* You can add more than one task and see them all
+* You can complete a task
+* Completing a task will remove it from the page
 * You can mark a task as incomplete
-* You can delete a task 
-* Your monster will provide feedback when you complete a task 
-* Your monster will provide feedback if you do not complete a task 
-* You can update a task 
+* You can delete a task
+* Your monster will provide feedback when you complete a task
+* Your monster will provide feedback if you do not complete a task
+* You can update a task
 
 ## Features Implemented
 Here is a list of the currently implemented features on SassTask:
 
-* You can add tasks
-<img src="assets/Main_screen.png" height='500'>
+* You can add tasks:
 
-* You can see a list of tasks
-<img src="assets/TaskList.png" height='500'>
+<img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/Task_added.png" height='500'>
 
-* You can complete tasks
-<img src="assets/CompletreTask.png" height='500'>
+* You can see a list of tasks:
 
-* You can mark tasks as incomplete
-<img src="assets/IncompleteTask.png" height='500'>
+<img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/TaskList.png" height='500'>
 
-* You can delete tasks
+* You can complete tasks:
 
-* Your monster will provide feedback when you complete tasks
+<img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/Complete_task.png" height='500'>
 
-* Your monster will provide feedback when you do not complete tasks
+* You can mark tasks as incomplete:
+
+<img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/failed_task.png" height='500'>
+
+* You can delete tasks:
+
+<img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/deleted_task.png" height='500'>
+
+* Your monster will provide feedback when you complete tasks:
+
+<img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/Complete_task.png" height='500'>
+
+* Your monster will provide feedback when you do not complete tasks:
+
+<img src="assets/Task_added.png" height='500'> <text> ---> </text> <img src="assets/Mainpage-empty.png" height='500'> <text> ---> </text> <img src="assets/failed_task.png" height='500'>
+
+* Your monster will die if you do not complete enough tasks:
+
+* Your monster will ascend if you complete enough tasks:
 
 ## Features to be implemented
-* You can update tasks 
+
+* You can get a new monster when your monster dies/moves on
+
+* You can keep track of completed/failed tasks
+
+* You can see stats of how well you are doing
 
 ## Planning
 Here is a link to our trello board:  
