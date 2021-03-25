@@ -106,7 +106,7 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
             <Button title='Reset Monster' onPress={() => resetButton()}/>
           </View>
           <View style={styles.evolveButton}>
-            <Button title='Evolve Monster' onPress={() => monsterPicker()}/>
+            <Button title='Evolve Monster' onPress={() => monsterPicker()} />
           </View>
       </View>
     </View>

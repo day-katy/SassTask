@@ -103,48 +103,11 @@ export default StyleSheet.create({
    marginBottom: 10,
    alignItems: 'center',
  },
- completedTask: {
-   paddingTop: 40,
-   marginLeft: 5,
-   fontSize: 15,
-   fontWeight: 'bold',
-   alignSelf: 'flex-start'
- },
- completedTaskNum: {
-   paddingBottom: 20,
-   marginLeft: 5,
-   fontSize: 20,
-   fontWeight: 'bold',
-   alignSelf: 'flex-start',
-   color: 'crimson'
- },
  resetButton: {
     backgroundColor: 'white',
     borderRadius: 70,
     borderColor: 'grey',
-    borderWidth: 1,
-  },
-  progressReport: {
-    alignSelf: 'flex-start',
-    fontSize: 15,
-    fontWeight: 'bold',
-    marginLeft: 5
-  },
-  monsterProgressReport: {
-    margin: 5,
-    marginLeft: 5,
-    fontSize: 20,
-    fontWeight: 'bold',
-    paddingBottom: 60,
-    alignSelf: 'flex-start',
-    color: 'crimson'
-  },
-  monsterMessage: {
-    margin: 5,
-    fontSize: 25,
-    fontWeight: 'bold',
-    color: 'green',
-    flexWrap: 'wrap'
+    borderWidth: 1
   },
   evolveButton: {
     backgroundColor: 'white',
@@ -158,5 +121,47 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     width: "100%",
     alignItems: 'center'
+  },
+  reportSection: {
+    backgroundColor: 'white',
+    alignSelf: 'flex-start',
+    margin: 5,
+    width: "95%",
+    borderRadius: 60,
+    alignItems: 'center',
+    alignSelf: 'center'
+  },
+  progressReport: {
+
+    fontSize: 15,
+    fontWeight: 'bold',
+    marginLeft: 5
+  },
+  monsterProgressReport: {
+    margin: 5,
+    marginLeft: 5,
+    fontSize: 20,
+    fontWeight: 'bold',
+    paddingBottom: 60,
+    color: 'crimson'
+  },
+  monsterMessage: {
+    margin: 5,
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: 'green',
+    flexWrap: 'wrap'
+  },
+  completedTask: {
+    marginLeft: 5,
+    fontSize: 15,
+    fontWeight: 'bold',
+  },
+  completedTaskNum: {
+    paddingBottom: 60,
+    marginLeft: 5,
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'crimson'
   },
 })
