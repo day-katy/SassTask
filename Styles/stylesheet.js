@@ -34,10 +34,12 @@ export default StyleSheet.create({
     alignItems: 'center',
     borderRadius: 60,
     borderColor: '#C0C0C0',
-    borderWidth: 1
+    borderWidth: 1,
+    marginRight: 20
   },
   addTaskSection: {
     width: '100%',
+    paddingLeft: 20,
    flexDirection: 'row',
    justifyContent: 'space-around',
    alignItems: 'center'
@@ -65,7 +67,7 @@ export default StyleSheet.create({
    maxWidth: '80%',
  },
  monsterSection:{
-   flex: 1,
+   flex: 2,
 
  },
  monsterSmall:{
@@ -87,7 +89,8 @@ export default StyleSheet.create({
    fontSize: 40,
    fontWeight: 'bold',
    paddingTop: 50,
-   textAlign: 'center'
+   textAlign: 'center',
+   paddingBottom: 30
  },
  background: {
    height: 400,
@@ -98,14 +101,40 @@ export default StyleSheet.create({
  monsterPage: {
    flex: 1,
    marginBottom: 10,
-   justifyContent: 'center',
-   alignItems: 'center'
+   alignItems: 'center',
  },
  completedTaskNum: {
-   paddingTop: 200,
+   paddingTop: 40,
+   paddingBottom: 80,
+
  },
  resetButton: {
-  backgroundColor: 'white',
-  borderRadius: 70,
- }
+    backgroundColor: 'white',
+    borderRadius: 70,
+    borderColor: 'grey',
+    borderWidth: 1,
+  },
+  monsterMessage: {
+    margin: 5,
+    fontSize: 15,
+    fontWeight: 'bold',
+  },
+  evolveButton: {
+    backgroundColor: 'white',
+    borderRadius: 70,
+    borderColor: 'grey',
+    borderWidth: 1,
+  },
+  monsterButtons: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: "100%",
+    alignItems: 'center'
+  },
+  buttonRow: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    flexDirection: 'row'
+  }
 })
