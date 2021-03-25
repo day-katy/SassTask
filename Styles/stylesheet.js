@@ -132,9 +132,4 @@ export default StyleSheet.create({
     width: "100%",
     alignItems: 'center'
   },
-  buttonRow: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    flexDirection: 'row'
-  }
 })

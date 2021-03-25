@@ -6,6 +6,19 @@ import Task from '../components/Task';
 import { updateTaskStatus } from '../src/firebase/utils'
 
 const TaskList = (props) => {
+  const positiveMessages = ["'You go Gurrl!'", "You're rocking it!", "Way to be awesome!", "Keep it up you rockstar!"]
+  const neutralMessages = ["Good effort..I guess?", "You are trying to keep me alive right?", "Eh", "Not great, not bad"]
+  const negativeMessages = ["Disappointing", "I thought you were better than this.....well I didn't but way to not prove me wrong", "Are you even trying?", "Are you trying to kill me?!"]
+
+  const messageSetter = () => {
+    if(props.rating > 1){
+      props.setMessage(positiveMessages[Math.floor(Math.random()*positiveMessages.length)])
+    } else if (props.rating < -1) {
+      props.setMessage(negativeMessages[Math.floor(Math.random()*negativeMessages.length)])
+    } else {
+      props.setMessage(neutralMessages[Math.floor(Math.random()*neutralMessages.length)])
+    }
+  }
 
   const completeTask = (index) => {
     let itemsCopy = [...props.taskItems];
@@ -16,7 +29,7 @@ const TaskList = (props) => {
 
   const yesButton = (item) => {
 
-    props.setMessage("You go gurrl");
+    messageSetter();
     props.setCompletedTasks([...props.completedTasks, item]);
     props.setRating(props.rating += 1)
     // completeTask();
@@ -30,7 +43,7 @@ const TaskList = (props) => {
   }
 
   const noButton = (item) => {
-    props.setMessage("You sicken me");
+    messageSetter();
     props.setIncompleteTasks([...props.incompleteTasks, item]);
     props.setRating(props.rating -= 1)
     // completeTask();
