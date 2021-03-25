@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState, useEffect}  from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import styles from '../Styles/stylesheet';
+// import { AppLoading } from 'expo';
+import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico';
+
 
 const Title = () => {
   return (
@@ -14,3 +17,5 @@ const Title = () => {
 
 
 export default Title;
+
+

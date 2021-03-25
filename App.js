@@ -6,10 +6,19 @@ import Swiper from 'react-native-swiper';
 import Monster from './screens/Monster';
 import TaskPage from './screens/TaskPage';
 import styles from './Styles/stylesheet';
+// import AppLoading from 'expo-app-loading';
+import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico';
 
 import { loadTasksFromDB } from './src/firebase/utils'
 
 export default function App() {
+  // let [fontsLoaded] = useFonts({
+  //   Pacifico_400Regular,    
+  // });
+  // if (!fontsLoaded) {
+  //   console.log("buttface");
+  // }
+
   const [taskItems, setTaskItems] = useState([])
   const [completedTasks, setCompletedTasks] = useState([]);
   const [incompleteTasks, setIncompleteTasks] = useState([]);
@@ -66,3 +75,6 @@ export default function App() {
     </Container>
   );
 }
+
+
+ 

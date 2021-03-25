@@ -1,3 +1,4 @@
+import { Pacifico_400Regular } from '@expo-google-fonts/pacifico';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
@@ -86,6 +87,7 @@ export default StyleSheet.create({
   width: 400
 },
  title: {
+  //  fontFamily: 'Pacifico_400Regular',
    fontSize: 40,
    fontWeight: 'bold',
    paddingTop: 50,
