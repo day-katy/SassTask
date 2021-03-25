@@ -1,7 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 _storeData = async (key, value) => {
-  console.log("I'm in storeData")
   try {
     await AsyncStorage.setItem(`@${key}`, value);
   } catch (error) {
@@ -23,10 +22,8 @@ const createUid = function(){
 }
 
  export async function returnDeviceId(){
-  console.log("We're in returnDeviceId")
   //check if id exists 
     var value = await _retrieveData("uniqueDeviceId")
-
  //if it does not exist, create a new one and store it
     if (value === null) {
       var uniqueId = createUid()
