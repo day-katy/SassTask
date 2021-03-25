@@ -8,12 +8,22 @@ let dbTodoRef
  async function initializeConstants(){
      try {
         deviceId = await returnDeviceId()
-        } catch (error) {
-            console.error("there was an error returning the device ID")
-        }
-        dbTodoPath = deviceId + '/todos';
-        dbTodoRef = firebase.database().ref(dbTodoPath);
-    };
+
+} catch (error) {
+    console.error("there was an error returning the device ID")
+  }
+     dbTodoPath = 'todos/' + deviceId;
+    dbTodoRef = firebase.database().ref(dbTodoPath);
+
+    
+};
+
+
+
+
+
+// const deviceId = 'phone_001';
+
 
 export function writeData(info) {
     info.time = firebase.database.ServerValue.TIMESTAMP
@@ -24,9 +34,14 @@ export function writeData(info) {
             });
 }
 
-export function updateTaskStatus(item, status) {
+export function sayHi(name) {
+    console.log('Hi ' + name);
+}
+
+export function updateTaskStatus(item) {
+    console.log('In UPDATE')
     dbTodoRef.orderByChild("time").equalTo(item[0]).on("child_added", function(snapshot) {
-      dbTodoRef.child(snapshot.key).update({'taskStatus': status})
+      dbTodoRef.child(snapshot.key).update({'taskStatus': 'Y'})
     });
 }
 
@@ -39,7 +54,7 @@ export async function loadTasksFromDB() {
 
     if (data) {
         for (const [key, value] of Object.entries(data)) {
-            if ( value.taskStatus.match("^\\s+$") ) {
+            if ( value.taskStatus !== 'Y' ) {
                 todosFromDB.push([value.time, value.taskName]);
             }
         }
