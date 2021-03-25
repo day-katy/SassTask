@@ -12,6 +12,19 @@ const TaskScreen = ({taskItems, setTaskItems, setCompletedTasks, setIncompleteTa
     <ScrollView testID='container' style={styles.container}>
 
       <Title/>
+      <KeyboardAvoidingView style={styles.addTaskSection}>
+
+        <TaskInput
+          setTask ={setTask}
+          setTaskItems={setTaskItems}
+          taskItems={taskItems}
+          task={task}
+          setTask ={setTask}
+          setMessage={setMessage}
+          changeCount={changeCount}
+          setChangeCount={setChangeCount} />
+
+      </KeyboardAvoidingView>
 
       <TaskList
         taskItems={taskItems}
@@ -26,20 +39,6 @@ const TaskScreen = ({taskItems, setTaskItems, setCompletedTasks, setIncompleteTa
         setRating={setRating}
         changeCount={changeCount}
         setChangeCount={setChangeCount} />
-
-      <KeyboardAvoidingView style={styles.addTaskSection}>
-
-        <TaskInput
-          setTask ={setTask}
-          setTaskItems={setTaskItems}
-          taskItems={taskItems}
-          task={task}
-          setTask ={setTask}
-          setMessage={setMessage}
-          changeCount={changeCount}
-          setChangeCount={setChangeCount} />
-
-      </KeyboardAvoidingView>
 
     </ScrollView>
   )

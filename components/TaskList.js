@@ -20,6 +20,7 @@ const TaskList = (props) => {
     props.setRating(props.rating += 1)
     // completeTask();
 
+
     updateTaskStatus(item, 'Y');
     setTimeout(() => {
       let newCount = props.changeCount + 1;
