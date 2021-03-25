@@ -69,6 +69,10 @@ https://www.piskelapp.com/
 
 <img src='./assets/piskel-icon.png' height='200'>
 
+Testing: 
+For testing we have used Jest. 
+
+
 
 ## Wireframe
 Here is the initial wireframe design of our app:
@@ -190,7 +194,7 @@ To run our tests run the following command in your terminal:
 yarn test
 ```
 <img src="assets/Test_Coverage.png">
-Currently all tests are passing with 100% Coverage.
+Currently we have one test failing and less than 100% coverage. 
 
 ## Tests to Implement
 
