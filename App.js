@@ -20,18 +20,13 @@ export default function App() {
   const [changeCount, setChangeCount] = useState(0)
 
   useEffect(() => {
-    console.log('IN useEFFECT')
     async function fetchData() {
       let res = await loadTasksFromDB()
-      console.log(`LoadFromDB length = ${res.length}`)
-      console.log(`State prior to update = ${taskItems.length}`)
       setTaskItems([...res])
-      console.log(`State after update = ${taskItems.length}`)
     }
     fetchData();
     return () => {
       // DB cleanup code here;
-      console.log('IN cleanUP')
     }
   }, [changeCount])
 

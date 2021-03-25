@@ -12,8 +12,8 @@ export function writeData(info) {
         alert(error)
             });
 }
+
 export function updateTaskStatus(item, status) {
-    console.log('In UPDATE')
     dbTodoRef.orderByChild("time").equalTo(item[0]).on("child_added", function(snapshot) {
       dbTodoRef.child(snapshot.key).update({'taskStatus': status})
     });
@@ -27,7 +27,7 @@ export async function loadTasksFromDB() {
 
     if (data) {
         for (const [key, value] of Object.entries(data)) {
-            if ( value.taskStatus !== 'Y' ) {
+            if ( value.taskStatus.match("^\\s+$") ) {
                 todosFromDB.push([value.time, value.taskName]);
             }
         }
