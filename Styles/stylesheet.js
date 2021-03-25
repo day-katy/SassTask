@@ -99,13 +99,13 @@ export default StyleSheet.create({
     alignItems: 'center',
  },
  monsterPage: {
-   flex: 2,
+   flex: 1,
    marginBottom: 10,
    alignItems: 'center',
  },
  completedTaskNum: {
    paddingTop: 40,
-   paddingBottom: 160,
+   paddingBottom: 80,
 
  },
  resetButton: {
@@ -115,7 +115,9 @@ export default StyleSheet.create({
     borderWidth: 1,
   },
   monsterMessage: {
-    margin: 5
+    margin: 5,
+    fontSize: 15,
+    fontWeight: 'bold',
   },
   evolveButton: {
     backgroundColor: 'white',
@@ -130,4 +132,9 @@ export default StyleSheet.create({
     width: "100%",
     alignItems: 'center'
   },
+  buttonRow: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    flexDirection: 'row'
+  }
 })

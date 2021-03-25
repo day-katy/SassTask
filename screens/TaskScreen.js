@@ -9,6 +9,7 @@ const TaskScreen = ({taskItems, setTaskItems, setCompletedTasks, setIncompleteTa
   const [task, setTask] = useState();
 
   LogBox.ignoreAllLogs();
+  
   return (
     <ScrollView testID='container' style={styles.container}>
 

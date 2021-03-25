@@ -101,12 +101,12 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
         </TouchableOpacity>
       </ImageBackground>
       <View styles={styles.monsterButtons}>
-        <View  style={styles.resetButton}>
-          <Button title='Reset Monster' onPress={() => resetButton()}/>
-        </View>
-        <View style={styles.evolveButton}>
-          <Button title='evolve Monster' onPress={() => monsterPicker()}/>
-        </View>
+          <View  style={styles.resetButton}>
+            <Button title='Reset Monster' onPress={() => resetButton()}/>
+          </View>
+          <View style={styles.evolveButton}>
+            <Button title='evolve Monster' onPress={() => monsterPicker()}/>
+          </View>
       </View>
     </View>
   )
