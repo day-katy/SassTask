@@ -31,13 +31,22 @@ export default function App() {
   }, [changeCount])
 
   return (
-    
+
     <Container testID= "entireAppWrapper" style={styles.EntireApp}>
       <Swiper
       loop ={false}
       showsPagination={false}
       index={1}>
         <Monster />
+        <TaskPage
+          completedTasks={completedTasks}
+          incompleteTasks={incompleteTasks}
+          message={message}
+          setMessage={setMessage}
+          imageSrc={imageSrc}
+          setImageSrc={setImageSrc}
+          rating={rating}
+          setRating={setRating} />
         <TaskScreen
           taskItems ={taskItems}
           setTaskItems={setTaskItems}
@@ -52,15 +61,7 @@ export default function App() {
           setRating={setRating}
           changeCount={changeCount}
           setChangeCount={setChangeCount} />
-        <TaskPage 
-          completedTasks={completedTasks}
-          incompleteTasks={incompleteTasks}
-          message={message}
-          setMessage={setMessage}
-          imageSrc={imageSrc}
-          setImageSrc={setImageSrc}
-          rating={rating}
-          setRating={setRating} />
+
       </Swiper>
     </Container>
   );

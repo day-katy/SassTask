@@ -88,15 +88,25 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
     }
   }
 
+  const monsterTalk = () => {
+    const talkArray = ["Stop touching me", "What?", "Why are you bothering me?"];
+    return setMessage(talkArray[Math.floor(Math.random()*talkArray.length)]);
+  }
+
   return (
     <View>
       <ImageBackground source={require('../assets/green-background.jpg')} style={styles.background}>
-        <TouchableOpacity onPress={() => monsterPicker()}>
+        <TouchableOpacity onPress={() => monsterTalk()}>
           <Image source={imageSrc} style={monsterStyle}/>
         </TouchableOpacity>
       </ImageBackground>
-      <View  style={styles.resetButton}>
-        <Button title='Reset Monster' onPress={() => resetButton()}/>
+      <View styles={styles.monsterButtons}>
+        <View  style={styles.resetButton}>
+          <Button title='Reset Monster' onPress={() => resetButton()}/>
+        </View>
+        <View style={styles.evolveButton}>
+          <Button title='evolve Monster' onPress={() => monsterPicker()}/>
+        </View>
       </View>
     </View>
   )
