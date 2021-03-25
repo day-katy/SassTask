@@ -90,4 +90,8 @@ export default StyleSheet.create({
    paddingTop: 50,
    textAlign: 'center'
  },
+ background: {
+   height: 200,
+   width: 200
+ }
 })

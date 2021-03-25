@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View, Button} from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View, Button, ImageBackground} from 'react-native';
 import styles from '../Styles/stylesheet';
 
 export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRating, setMessage }) => {
@@ -90,10 +90,13 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
 
   return (
     <View>
+    <ImageBackground source={require('../assets/green-background.jpg')} style={styles.background}>
       <TouchableOpacity onPress={() => monsterPicker()}>
         <Image source={imageSrc} style={monsterStyle}/>
       </TouchableOpacity>
+      </ImageBackground>
       <View>
+
         <Button title='Reset Monster' onPress={() => resetButton()}/>
       </View>
     </View>
