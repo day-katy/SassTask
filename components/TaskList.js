@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native';
 import Task from '../components/Task';
 
-import { sayHi, updateTaskStatus } from '../src/firebase/utils'
+import { updateTaskStatus } from '../src/firebase/utils'
 
 const TaskList = (props) => {
 
