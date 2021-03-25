@@ -9,8 +9,8 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
   const [famIndex, setFamIndex] = useState(0)
 
   let firstFam = [require('../assets/Sassagotchi-ghost.gif'), require('../assets/Sassagotchi-egg-dying.gif'), require('../assets/Sassagotchi-egg-coloured.gif'), require('../assets/Sassagotchi-final-egg.gif'), require('../assets/SasSquash.gif'), require('../assets/SnapSquash.gif'), require('../assets/Ascended-Snapsquash.gif')]
-  let secondFam = [require('../assets/number0.png'), require('../assets/number1.png'), require('../assets/number2.png'), require('../assets/number3.png'), require('../assets/number4.png'), require('../assets/number5.png'), require('../assets/number6.png')]
-  let famIndex1 = 0
+  let secondFam = [require('../assets/purpleMonster/ghost.gif'), require('../assets/purpleMonster/egg-rotting.gif'), require('../assets/purpleMonster/egg-stage-1.gif'), require('../assets/purpleMonster/egg-stage-2.gif'), require('../assets/purpleMonster/Sass-1.gif'), require('../assets/purpleMonster/Sass-2.gif'), require('../assets/purpleMonster/Sass-final.gif')]
+  // let famIndex1 = 0
   let famIndex2 = 2
   let families = [firstFam, secondFam]
 
@@ -65,18 +65,26 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
     console.log(firstFam[0])
     if(rating > 10) {
       setRating(0)
+      setImageSrc(families[famIndex][famIndex2])
       setMessage("Congratulations. Here is a new monster for you to try with...")
       setMonsterStyle(styles.monsterSmall)
-      setImageSrc(require('../assets/Sassagotchi-egg-coloured.gif'))
-      setFamIndex(1)
+      if(famIndex == 0){
+        setFamIndex(1)
+      } else if (famIndex == 1){
+        setFamIndex(0)
+      }
     } else if(rating > -2) {
       setMessage('You must live with your choices')
     } else {
       setRating(0)
+      setImageSrc(families[famIndex][famIndex2])
       setMessage("You have been given another chance... don't mess it up")
       setMonsterStyle(styles.monsterSmall)
-      setImageSrc(require('../assets/Sassagotchi-egg-coloured.gif'))
-      setFamIndex(1)
+      if(famIndex == 0){
+        setFamIndex(1)
+      } else if (famIndex == 1){
+        setFamIndex(0)
+      }
     }
   }
 
