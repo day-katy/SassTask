@@ -103,10 +103,20 @@ export default StyleSheet.create({
    marginBottom: 10,
    alignItems: 'center',
  },
- completedTaskNum: {
+ completedTask: {
    paddingTop: 40,
-   paddingBottom: 80,
-
+   marginLeft: 5,
+   fontSize: 15,
+   fontWeight: 'bold',
+   alignSelf: 'flex-start'
+ },
+ completedTaskNum: {
+   paddingBottom: 20,
+   marginLeft: 5,
+   fontSize: 20,
+   fontWeight: 'bold',
+   alignSelf: 'flex-start',
+   color: 'crimson'
  },
  resetButton: {
     backgroundColor: 'white',
@@ -114,10 +124,27 @@ export default StyleSheet.create({
     borderColor: 'grey',
     borderWidth: 1,
   },
-  monsterMessage: {
-    margin: 5,
+  progressReport: {
+    alignSelf: 'flex-start',
     fontSize: 15,
     fontWeight: 'bold',
+    marginLeft: 5
+  },
+  monsterProgressReport: {
+    margin: 5,
+    marginLeft: 5,
+    fontSize: 20,
+    fontWeight: 'bold',
+    paddingBottom: 60,
+    alignSelf: 'flex-start',
+    color: 'crimson'
+  },
+  monsterMessage: {
+    margin: 5,
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: 'green',
+    flexWrap: 'wrap'
   },
   evolveButton: {
     backgroundColor: 'white',
