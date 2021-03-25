@@ -15,29 +15,31 @@ const TaskList = (props) => {
 
   const yesButton = (item) => {
 
-    console.log('In YESBUTTON')
     props.setMessage("You go gurrl");
     props.setCompletedTasks([...props.completedTasks, item]);
     props.setRating(props.rating += 1)
-    completeTask();
+    // completeTask();
 
-    sayHi(item[1])
-    updateTaskStatus(item);
-    let newCount = props.changeCount + 1;
-    props.setChangeCount(newCount);
+
+    updateTaskStatus(item, 'Y');
+    setTimeout(() => {
+      let newCount = props.changeCount + 1;
+      props.setChangeCount(newCount);
+    }, 500)
   }
 
   const noButton = (item) => {
     props.setMessage("You sicken me");
     props.setIncompleteTasks([...props.incompleteTasks, item]);
     props.setRating(props.rating -= 1)
-    completeTask();
+    // completeTask();
 
-    // updateTodoStatus(item);
-    // let newCount = props.changeCount + 1;
-    // props.setChangeCount(newCount);
+    updateTaskStatus(item, 'N');
+    setTimeout(() => {
+      let newCount = props.changeCount + 1;
+      props.setChangeCount(newCount);
+    }, 500)
   }
-
 
   return (
     <View style={styles.taskList}>{
