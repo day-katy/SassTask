@@ -107,33 +107,38 @@ export default StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 70,
     borderColor: 'grey',
-    borderWidth: 1
+    borderWidth: 1,
+    width: "30%",
+
   },
   evolveButton: {
     backgroundColor: 'white',
     borderRadius: 70,
     borderColor: 'grey',
     borderWidth: 1,
+    width: "30%",
+
   },
   monsterButtons: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: "100%",
-    alignItems: 'center'
+    alignItems: 'flex-start',
+    justifyContent: 'space-around',
+    marginTop: 25,
+
   },
   reportSection: {
-    backgroundColor: 'white',
+    backgroundColor: '#c6e0ff',
     alignSelf: 'flex-start',
     margin: 5,
-    width: "95%",
+    width: "90%",
     borderRadius: 60,
     alignItems: 'center',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    marginBottom: 15
   },
   progressReport: {
-
-    fontSize: 15,
+    fontSize: 20,
     fontWeight: 'bold',
     marginLeft: 5
   },
@@ -142,25 +147,29 @@ export default StyleSheet.create({
     marginLeft: 5,
     fontSize: 20,
     fontWeight: 'bold',
-    paddingBottom: 60,
-    color: 'crimson'
+    color: 'crimson',
+    padding: 20,
   },
   monsterMessage: {
     margin: 5,
     fontSize: 25,
     fontWeight: 'bold',
-    color: 'green',
-    flexWrap: 'wrap'
+    color: '#f05365',
+    flexWrap: 'wrap',
+    position: 'absolute',
+    zIndex: 100,
+    alignSelf: 'center',
+    paddingTop: 25
   },
   completedTask: {
     marginLeft: 5,
-    fontSize: 15,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   completedTaskNum: {
-    paddingBottom: 60,
+    padding: 20,
     marginLeft: 5,
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: 'bold',
     color: 'crimson'
   },

@@ -11,16 +11,18 @@ const TaskPage = ({completedTasks, message, imageSrc, setImageSrc, rating, setRa
   return (
     <View style={styles.monsterPage}>
       <Title/>
+      <Text style={styles.completedTask}>Completed tasks:</Text>
       <View style={styles.reportSection}>
-        <Text style={styles.completedTask}>Completed tasks:</Text>
+
         <Text style={styles.completedTaskNum}> {completedTasks.length}</Text>
       </View>
-      <View style={styles.reportSection}>
         <Text style={styles.progressReport}>Current thoughts on your progress: </Text>
+      <View style={styles.reportSection}>
+
         <Text style={styles.monsterProgressReport}>{message}</Text>
       </View>
-      <Text style={styles.monsterMessage}>{monsterSays}</Text>
       <View style={styles.monsterSection}>
+          <Text style={styles.monsterMessage}>{monsterSays}</Text>
           <Monster imageSrc={imageSrc} setImageSrc={setImageSrc} completedTasks={completedTasks} rating={rating} setRating={setRating} setMessage={setMessage} monsterSays={monsterSays} setMonsterSays={setMonsterSays}/>
       </View>
     </View>

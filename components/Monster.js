@@ -14,7 +14,7 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
   let famIndex2 = 2
   let families = [firstFam, secondFam]
 
-  const talkArray = ["'Stop touching me. You're gross'", "'What?'", "'Why are you bothering me?'", "'Your fingers are huge. Get them away from me.'", "'NO NO GET AWAY!'"];
+  const talkArray = ["'Stop touching me. You're gross'", "'What?'", "'Why are you bothering me?'", "'Your fingers are huge.'", "'NO NO GET AWAY!'"];
 
   const resetResponse = ["Err did you just try and kill me?", "Stop pressing that", "Why would you try and reset me?"]
 
@@ -23,7 +23,7 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
     if (rating == 4){
       setMonsterStyle(styles.monsterLarge)
       setImageSrc(families[famIndex][famIndex2 += 4])
-      setMessage("'Your efforts have allowed me to ascend. I can go no further. Click reset to try again with a new Sasscot...'")
+      setMessage("'Your efforts have allowed me to ascend. Click reset to try again with a new Sassagotchi...'")
     }
     // else if(rating >7) {
     //       setMonsterStyle(styles.monsterLarge)
@@ -110,7 +110,7 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
           <Image source={imageSrc} style={monsterStyle}/>
         </TouchableOpacity>
       </ImageBackground>
-      <View styles={styles.monsterButtons}>
+      <View style={styles.monsterButtons}>
           <View  style={styles.resetButton}>
             <Button title='Reset' onPress={() => resetButton()}/>
           </View>
