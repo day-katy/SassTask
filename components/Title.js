@@ -6,7 +6,7 @@ import styles from '../Styles/stylesheet';
 const Title = () => {
   return (
     <View>
-      <Text testID="title" style={styles.title}>SasSquash</Text>
+      <Text testID="title" style={styles.title}>SassSquatch</Text>
       <StatusBar style="auto" />
   </View>
   );
