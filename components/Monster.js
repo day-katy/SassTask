@@ -103,10 +103,10 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
       </ImageBackground>
       <View styles={styles.monsterButtons}>
           <View  style={styles.resetButton}>
-            <Button title='Reset Monster' onPress={() => resetButton()}/>
+            <Button title='Reset' onPress={() => resetButton()}/>
           </View>
           <View style={styles.evolveButton}>
-            <Button title='Evolve Monster' onPress={() => monsterPicker()} />
+            <Button title='Evolve' onPress={() => monsterPicker()} />
           </View>
       </View>
     </View>
