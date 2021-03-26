@@ -90,7 +90,8 @@ export default StyleSheet.create({
    fontWeight: 'bold',
    paddingTop: 50,
    textAlign: 'center',
-   paddingBottom: 30
+   paddingBottom: 30,
+   fontFamily: "Baskerville-BoldItalic"
  },
  background: {
    height: 400,
@@ -149,6 +150,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     color: 'crimson',
     padding: 20,
+    fontFamily: "Marker Felt"
   },
   monsterMessage: {
     margin: 5,
@@ -159,7 +161,8 @@ export default StyleSheet.create({
     position: 'absolute',
     zIndex: 100,
     alignSelf: 'center',
-    paddingTop: 25
+    paddingTop: 25,
+    fontFamily: "Marker Felt"
   },
   completedTask: {
     marginLeft: 5,
@@ -171,6 +174,7 @@ export default StyleSheet.create({
     marginLeft: 5,
     fontSize: 25,
     fontWeight: 'bold',
-    color: 'crimson'
+    color: 'crimson',
+    fontFamily: "Marker Felt"
   },
 })
