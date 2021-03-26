@@ -42,7 +42,7 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
       //   setImageSrc(families[famIndex][famIndex2 += 2])
       // }
       else if(rating == 2) {
-        setMonsterStyle(styles.monsterSmall)
+        setMonsterStyle(styles.monsterMedium)
         setImageSrc(families[famIndex][famIndex2 += 2])
       }
       // else if(rating ==2) {
