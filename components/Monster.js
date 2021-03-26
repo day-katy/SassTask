@@ -20,42 +20,51 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
 
 
   const monsterPicker = () => {
-    if (rating > 10){
+    if (rating == 4){
       setMonsterStyle(styles.monsterLarge)
       setImageSrc(families[famIndex][famIndex2 += 4])
       setMessage("'Your efforts have allowed me to ascend. I can go no further. Click reset to try again with a new Sasscot...'")
-    } else if(rating >7) {
-          setMonsterStyle(styles.monsterLarge)
-          setImageSrc(families[famIndex][famIndex2 += 3])
-      } else if(rating >6) {
+    } 
+    // else if(rating >7) {
+    //       setMonsterStyle(styles.monsterLarge)
+    //       setImageSrc(families[famIndex][famIndex2 += 3])
+    //   } 
+      else if(rating == 3) {
           setMonsterStyle(styles.monsterMedium)
           setImageSrc(families[famIndex][famIndex2 += 3])
-      } else if(rating >5) {
-        setMonsterStyle(styles.monsterSmall)
-        setImageSrc(families[famIndex][famIndex2 += 3])
-      } else if(rating >4) {
-        setMonsterStyle(styles.monsterLarge)
-        setImageSrc(families[famIndex][famIndex2 += 2])
-      } else if(rating >3) {
+      } 
+      // else if(rating == 3) {
+      //   setMonsterStyle(styles.monsterSmall)
+      //   setImageSrc(families[famIndex][famIndex2 += 3])
+      // } 
+      // else if(rating >4) {
+      //   setMonsterStyle(styles.monsterLarge)
+      //   setImageSrc(families[famIndex][famIndex2 += 2])
+      // } 
+      else if(rating == 2) {
         setMonsterStyle(styles.monsterMedium)
         setImageSrc(families[famIndex][famIndex2 += 2])
-      } else if(rating >2) {
-        setMonsterStyle(styles.monsterSmall)
-        setImageSrc(families[famIndex][famIndex2 += 2])
-      } else if (rating > 1) {
+      } 
+      // else if(rating ==2) {
+      //   setMonsterStyle(styles.monsterSmall)
+      //   setImageSrc(families[famIndex][famIndex2 += 2])
+      // }
+       else if (rating == 1) {
         setMonsterStyle(styles.monsterLarge)
         setImageSrc(families[famIndex][famIndex2 += 1])
-      } else if (rating > 0) {
-        setMonsterStyle(styles.monsterMedium)
-        setImageSrc(families[famIndex][famIndex2])
-      } else if (rating == 0) {
+      } 
+      // else if (rating > 0) {
+      //   setMonsterStyle(styles.monsterMedium)
+      //   setImageSrc(families[famIndex][famIndex2])
+      // } 
+      else if (rating == 0) {
         setMonsterStyle(styles.monsterSmall)
         setImageSrc(families[famIndex][famIndex2])
-      } else if (rating < 0 && rating > -2) {
+      } else if (rating == -1) {
         setMonsterStyle(styles.monsterSmall)
         setImageSrc(families[famIndex][famIndex2 -= 1])
       }
-       else if (rating < -2) {
+       else if (rating == -2) {
         setMonsterStyle(styles.monsterSmall)
         setMessage("You killed me! Click reset to try again")
         setImageSrc(families[famIndex][famIndex2 -= 2])
@@ -65,7 +74,7 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
 
   const resetButton = () => {
     console.log(firstFam[0])
-    if(rating > 10) {
+    if(rating >= 4) {
       setRating(0)
       setImageSrc(families[famIndex][famIndex2])
       setMessage("Congratulations. Here is a new monster for you to try with...")
@@ -75,7 +84,7 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
       } else if (famIndex == 1){
         setFamIndex(0)
       }
-    } else if(rating > -2) {
+    } else if(rating <= -2) {
       setMessage(resetResponse[Math.floor(Math.random()*resetResponse.length)])
     } else {
       setRating(0)
