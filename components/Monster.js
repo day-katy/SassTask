@@ -76,7 +76,6 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
     console.log(firstFam[0])
     if(rating >= 4) {
       setRating(0)
-      setImageSrc(families[famIndex][famIndex2])
       setMessage("Congratulations. Here is a new monster for you to try with...")
       setMonsterStyle(styles.monsterSmall)
       if(famIndex == 0){
@@ -84,11 +83,11 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
       } else if (famIndex == 1){
         setFamIndex(0)
       }
+      setImageSrc(families[famIndex][famIndex2])
     } else if(rating <= -2) {
       setMessage(resetResponse[Math.floor(Math.random()*resetResponse.length)])
     } else {
       setRating(0)
-      setImageSrc(families[famIndex][famIndex2])
       setMessage("'You have been given another chance... don't mess it up'")
       setMonsterStyle(styles.monsterSmall)
       if(famIndex == 0){
@@ -96,6 +95,7 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
       } else if (famIndex == 1){
         setFamIndex(0)
       }
+      setImageSrc(families[famIndex][famIndex2])
     }
   }
 
