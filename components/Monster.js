@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View, Button, ImageBackground} from 'react-native';
 import styles from '../Styles/stylesheet';
 
-export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRating, setMessage }) => {
+export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRating, setMessage, monsterSays, setMonsterSays }) => {
 
   const [monsterStyle, setMonsterStyle] = useState(styles.monsterSmall)
 
@@ -14,14 +14,16 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
   let famIndex2 = 2
   let families = [firstFam, secondFam]
 
+  const talkArray = ["'Stop touching me. You're gross'", "'What?'", "'Why are you bothering me?'", "'Your fingers are huge. Get them away from me.'", "'NO NO GET AWAY!'"];
 
+  const resetResponse = ["Err did you just try and kill me?", "Stop pressing that", "Why would you try and reset me?"]
 
 
   const monsterPicker = () => {
     if (rating > 10){
       setMonsterStyle(styles.monsterLarge)
       setImageSrc(families[famIndex][famIndex2 += 4])
-      setMessage('Your efforts have allowed me to ascend. I can go no further. Click reset to try again with a new Sasscot...')
+      setMessage("'Your efforts have allowed me to ascend. I can go no further. Click reset to try again with a new Sasscot...'")
     } else if(rating >7) {
           setMonsterStyle(styles.monsterLarge)
           setImageSrc(families[famIndex][famIndex2 += 3])
@@ -74,11 +76,11 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
         setFamIndex(0)
       }
     } else if(rating > -2) {
-      setMessage('You must live with your choices')
+      setMessage(resetResponse[Math.floor(Math.random()*resetResponse.length)])
     } else {
       setRating(0)
       setImageSrc(families[famIndex][famIndex2])
-      setMessage("You have been given another chance... don't mess it up")
+      setMessage("'You have been given another chance... don't mess it up'")
       setMonsterStyle(styles.monsterSmall)
       if(famIndex == 0){
         setFamIndex(1)
@@ -89,8 +91,7 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
   }
 
   const monsterTalk = () => {
-    const talkArray = ["'Stop touching me. You're' gross'", "'What?'", "'Why are you bothering me?'", "'Your fingers are huge. Get them away from me.'", "'NO NO GET AWAY!'"];
-    return setMessage(talkArray[Math.floor(Math.random()*talkArray.length)]);
+    return setMonsterSays(talkArray[Math.floor(Math.random()*talkArray.length)]);
   }
 
   return (
@@ -102,10 +103,10 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
       </ImageBackground>
       <View styles={styles.monsterButtons}>
           <View  style={styles.resetButton}>
-            <Button title='Reset Monster' onPress={() => resetButton()}/>
+            <Button title='Reset' onPress={() => resetButton()}/>
           </View>
           <View style={styles.evolveButton}>
-            <Button title='evolve Monster' onPress={() => monsterPicker()}/>
+            <Button title='Evolve' onPress={() => monsterPicker()} />
           </View>
       </View>
     </View>
