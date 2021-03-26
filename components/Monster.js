@@ -24,39 +24,39 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
       setMonsterStyle(styles.monsterLarge)
       setImageSrc(families[famIndex][famIndex2 += 4])
       setMessage("'Your efforts have allowed me to ascend. I can go no further. Click reset to try again with a new Sasscot...'")
-    } 
+    }
     // else if(rating >7) {
     //       setMonsterStyle(styles.monsterLarge)
     //       setImageSrc(families[famIndex][famIndex2 += 3])
-    //   } 
+    //   }
       else if(rating == 3) {
-          setMonsterStyle(styles.monsterMedium)
+          setMonsterStyle(styles.monsterLarge)
           setImageSrc(families[famIndex][famIndex2 += 3])
-      } 
+      }
       // else if(rating == 3) {
       //   setMonsterStyle(styles.monsterSmall)
       //   setImageSrc(families[famIndex][famIndex2 += 3])
-      // } 
+      // }
       // else if(rating >4) {
       //   setMonsterStyle(styles.monsterLarge)
       //   setImageSrc(families[famIndex][famIndex2 += 2])
-      // } 
+      // }
       else if(rating == 2) {
-        setMonsterStyle(styles.monsterMedium)
+        setMonsterStyle(styles.monsterSmall)
         setImageSrc(families[famIndex][famIndex2 += 2])
-      } 
+      }
       // else if(rating ==2) {
       //   setMonsterStyle(styles.monsterSmall)
       //   setImageSrc(families[famIndex][famIndex2 += 2])
       // }
        else if (rating == 1) {
-        setMonsterStyle(styles.monsterLarge)
+        setMonsterStyle(styles.monsterMedium)
         setImageSrc(families[famIndex][famIndex2 += 1])
-      } 
+      }
       // else if (rating > 0) {
       //   setMonsterStyle(styles.monsterMedium)
       //   setImageSrc(families[famIndex][famIndex2])
-      // } 
+      // }
       else if (rating == 0) {
         setMonsterStyle(styles.monsterSmall)
         setImageSrc(families[famIndex][famIndex2])
@@ -84,9 +84,9 @@ export const monster = ({ imageSrc, setImageSrc, completedTasks, rating, setRati
         setFamIndex(0)
       }
       setImageSrc(families[famIndex][famIndex2])
-    } else if(rating <= -2) {
+    } else if(rating > -2 && rating < 4) {
       setMessage(resetResponse[Math.floor(Math.random()*resetResponse.length)])
-    } else {
+    } else if(rating <= -2){
       setRating(0)
       setMessage("'You have been given another chance... don't mess it up'")
       setMonsterStyle(styles.monsterSmall)

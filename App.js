@@ -36,8 +36,7 @@ export default function App() {
       <Swiper
       loop ={false}
       showsPagination={false}
-      index={1}>
-        <Monster />
+      index={0}>
         <TaskPage
           completedTasks={completedTasks}
           incompleteTasks={incompleteTasks}
