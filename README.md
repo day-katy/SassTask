@@ -7,10 +7,9 @@
 
 <img src='./assets/Sassagotchi-egg-coloured.gif' height='250'><img src='./assets/SasSquash.gif' height='250'> <img src='./assets/SnapSquash.gif' height='250'>
 
-This is our final project for Makers Academy.
+SassSquatch is a mobile app that works as a sassy digital task manager that links your productivity to a 'sass-agotchi'. Write a to do list, mark a task as complete, and your sass-agotchi will grow and evolve! If you mark a task as incomplete, your sass-agotchi will regress, and could even eventually die. So keep completing tasks! 
 
-
-The goal of this mobile app is to create a todo list and habit manager whereby you can track daily tasks/chores. Your success in completing/failing these tasks will have a direct effect for the monster which you care for, similar to a tamagotchi. Completing tasks will feed the monster, while failing to complete tasks will have a negative effect on your monster.
+This was our final group project for [Makers Academy](https://makers.tech/).
 
 
 ## To Run This App
